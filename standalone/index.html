@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Partenaires & Mécénat – Mignoned ar Pab</title>
+  <meta name="description" content="Entreprises et particuliers, soutenez nos actions par un don. Paiement sécurisé sur HelloAsso.">
+  <!-- Pas de script : la page n'affiche que du contenu et le formulaire HelloAsso. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'unsafe-inline'; frame-src https://www.helloasso.com; script-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <style>
+    /* ─── Thème : changez ces couleurs ───────────────────────────── */
+    :root {
+      --brand: #1d4e89;
+      --brand-soft: #e8f0fa;
+      --accent: #0f7b5f;
+      --text: #1c2430;
+      --muted: #55606e;
+      --bg: #f5f7fa;
+      --surface: #ffffff;
+      --border: #c9d2dd;
+      --focus: #f0a500;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color: var(--text); background: var(--bg); }
+    a { color: var(--brand); text-underline-offset: 2px; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+    header { background: var(--surface); border-bottom: 1px solid var(--border); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; flex-wrap: wrap; }
+    .brand { font-weight: 700; color: var(--brand); text-decoration: none; font-size: 1.1rem; }
+    .badge { margin: 0; font-size: .875rem; font-weight: 600; color: var(--accent); background: #e7f5f0; border-radius: 999px; padding: 4px 12px; }
+    main { padding: 24px 0 48px; }
+    h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); line-height: 1.2; margin: 0 0 8px; }
+    h2 { font-size: 1.15rem; margin: 0 0 10px; display: flex; align-items: center; gap: 10px; }
+    .lead { color: var(--muted); font-size: 1.075rem; margin: 0 0 24px; }
+    .layout { display: grid; gap: 20px; }
+    @media (min-width: 900px) { .layout { grid-template-columns: 340px minmax(0, 1fr); align-items: start; } .steps { position: sticky; top: 16px; } }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-bottom: 16px; }
+    .num { flex: none; display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--brand); color: #fff; font-size: .9rem; }
+    ul { padding-left: 20px; margin: 0 0 12px; }
+    li { margin-bottom: 6px; }
+    p { margin: 0 0 10px; }
+    .small { font-size: .9rem; }
+    .muted { color: var(--muted); }
+    .note { background: var(--brand-soft); border-left: 4px solid var(--brand); border-radius: 8px; padding: 12px 14px; margin: 12px 0; }
+    details summary { cursor: pointer; font-weight: 600; color: var(--brand); }
+    .form-card { padding: 0; overflow: hidden; }
+    .form-card .form-head { padding: 16px 20px; border-bottom: 1px solid var(--border); }
+    .form-card .form-head p { margin: 0; }
+    iframe { display: block; width: 100%; height: 1100px; border: 0; }
+    @media (max-width: 600px) { iframe { height: 1400px; } }
+    .fallback { padding: 14px 20px; border-top: 1px solid var(--border); font-size: .9rem; }
+    .btn { display: inline-block; background: var(--brand); color: #fff; font-weight: 700; text-decoration: none; padding: 10px 18px; border-radius: 8px; }
+    footer { border-top: 1px solid var(--border); background: var(--surface); padding: 20px 0; font-size: .9rem; }
+    footer p { margin: 4px 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner container">
+      <!-- Remplacez par <img src="logo.svg" alt="Mignoned ar Pab" height="40"> si vous avez un logo -->
+      <a class="brand" href="#">Mignoned ar Pab</a>
+      <p class="badge">🔒 Paiement sécurisé HelloAsso</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Partenaires &amp; Mécénat</h1>
+    <p class="lead">Entreprises et particuliers, soutenez nos actions par un don. Le paiement est réalisé de façon sécurisée sur HelloAsso, sans frais pour l'association.</p>
+
+    <div class="layout">
+      <!-- Colonne d'explications : ce que le donateur voit AVANT de payer -->
+      <div class="steps">
+        <section class="card" aria-labelledby="s1">
+          <h2 id="s1"><span class="num" aria-hidden="true">1</span> Vos informations</h2>
+          <ul class="small">
+            <li><strong>Entreprise :</strong> cochez dans le formulaire l'option de don au nom d'une société et indiquez la raison sociale [À VÉRIFIER : intitulé exact de l'option dans votre formulaire HelloAsso].</li>
+            <li><strong>Particulier :</strong> nom, prénom, adresse et email.</li>
+            <li>Vos données sont traitées par HelloAsso et l'association uniquement pour votre don et votre reçu (<a href="[URL_POLITIQUE_CONFIDENTIALITE]">politique de confidentialité</a>).</li>
+          </ul>
+        </section>
+
+        <section class="card" aria-labelledby="s2">
+          <h2 id="s2"><span class="num" aria-hidden="true">2</span> Le paiement</h2>
+          <ul class="small">
+            <li>Choisissez votre montant dans le formulaire ci-contre.</li>
+            <li>Le paiement par carte est réalisé sur HelloAsso. Aucune donnée bancaire ne passe par ce site.</li>
+            <li>HelloAsso peut vous proposer une contribution facultative à son fonctionnement, que vous pouvez modifier ou refuser.</li>
+          </ul>
+        </section>
+
+        <section class="card" aria-labelledby="s3">
+          <h2 id="s3"><span class="num" aria-hidden="true">3</span> Votre reçu fiscal</h2>
+          <ul class="small">
+            <li>Le reçu fiscal est émis par HelloAsso au nom de Mignoned ar Pab.</li>
+            <li>Il est envoyé par email à l'adresse saisie dans le formulaire. Vérifiez-la attentivement.</li>
+            <li>Il est aussi disponible dans votre espace donateur HelloAsso.</li>
+            <li>Pensez à vérifier vos spams. Délai indicatif : [DÉLAI_À_CONFIRMER].</li>
+          </ul>
+          <div class="note small">
+            <strong>Éligibilité :</strong> un reçu fiscal n'est délivré que pour un don <strong>sans contrepartie significative</strong>. Si votre soutien implique une contrepartie (visibilité, prestations…), <a href="mailto:[CONTACT@ASSOCIATION.ORG]">contactez-nous</a> avant de payer.
+          </div>
+          <details class="small">
+            <summary>Avantage fiscal</summary>
+            <p>Entreprises : [TEXTE À VALIDER PAR L'ASSOCIATION : taux, plafond, référence légale].</p>
+            <p>Particuliers : [TEXTE À VALIDER PAR L'ASSOCIATION : taux, plafond, référence légale].</p>
+            <p class="muted">L'éligibilité de l'association à l'émission de reçus fiscaux relève de sa responsabilité.</p>
+          </details>
+        </section>
+      </div>
+
+      <!-- Formulaire HelloAsso intégré -->
+      <section class="card form-card" aria-labelledby="don">
+        <div class="form-head">
+          <h2 id="don">Faire un don</h2>
+          <p class="small muted">Formulaire sécurisé fourni par HelloAsso.</p>
+        </div>
+        <!--
+          ⚙️ CONFIGURATION — remplacez [NUMERO_FORMULAIRE] par l'identifiant de votre formulaire de don.
+          Dans le back-office HelloAsso : Mes campagnes → votre formulaire de don → Diffusion → « Intégrer le formulaire »,
+          copiez l'URL qui se termine par /widget.
+        -->
+        <iframe
+          title="Formulaire de don HelloAsso – Mignoned ar Pab"
+          src="https://www.helloasso.com/associations/mignoned-ar-pab/formulaires/[NUMERO_FORMULAIRE]/widget"
+          loading="lazy"
+          allow="payment"
+          referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <div class="fallback">
+          Le formulaire ne s'affiche pas ?
+          <a class="btn" href="https://www.helloasso.com/associations/mignoned-ar-pab/formulaires/[NUMERO_FORMULAIRE]" target="_blank" rel="noopener">Donner sur HelloAsso</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Mignoned ar Pab · <a href="[URL_POLITIQUE_CONFIDENTIALITE]">Politique de confidentialité</a> · <a href="mailto:[CONTACT@ASSOCIATION.ORG]">Nous contacter</a></p>
+      <p class="muted">Les paiements sont traités par HelloAsso. Aucune donnée bancaire ne transite par ce site.</p>
+    </div>
+  </footer>
+</body>
+</html>
