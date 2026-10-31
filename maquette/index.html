@@ -1,0 +1,434 @@
+<title>Soutenir le Pab Fest</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+/* Layout : affiche de festival épurée — bandeau marin, une colonne de lecture, deux chemins (don / partenaire) côte à côte. */
+:root {
+  /* Couleur — mer d'Iroise, granit de l'île, ambre de la bière */
+  --sea: #0f2f4a;          /* bleu marin : titres, bandeaux */
+  --sea-soft: #e3ebf1;     /* fonds légers */
+  --amber: #e09a1a;        /* ambre : accent unique */
+  --amber-ink: #8a5600;    /* ambre lisible sur clair (AA) */
+  --granite: #f3f4f1;      /* fond de page */
+  --surface: #ffffff;
+  --ink: #17212b;
+  --muted: #56636f;
+  --line: #cfd6dc;
+  --ok: #1b7a55;
+  --ok-soft: #e4f3ec;
+  --err: #b42318;
+  --err-soft: #fdecea;
+  --focus: #e09a1a;
+  /* Type */
+  --display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+  --body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--granite); color: var(--ink); font: 17px/1.55 var(--body); }
+a { color: var(--sea); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+h1, h2, h3 { font-family: var(--display); text-transform: uppercase; letter-spacing: .01em; line-height: 1; margin: 0; text-wrap: balance; color: var(--sea); }
+p { margin: 0; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Bandeau maquette */
+.demo { background: var(--ink); color: #fff; font-size: .85rem; }
+.demo .wrap { padding-block: 6px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.demo strong { color: var(--amber); letter-spacing: .06em; text-transform: uppercase; font-size: .75rem; }
+
+/* En-tête */
+.top { background: var(--sea); color: #fff; }
+.top .wrap { padding-block: 14px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.mark { display: flex; align-items: baseline; gap: 10px; color: #fff; text-decoration: none; }
+.mark b { font-family: var(--display); font-weight: 900; font-size: 1.9rem; letter-spacing: .02em; line-height: 1; }
+.mark b i { font-style: normal; color: var(--amber); }
+.mark span { font-size: .85rem; opacity: .85; }
+.secure { display: inline-flex; gap: 6px; align-items: center; font-size: .85rem; font-weight: 700; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; padding: 4px 12px; }
+
+/* Hero */
+.hero { background: var(--sea); color: #fff; position: relative; }
+.hero .wrap { padding-block: 32px 56px; display: grid; gap: 18px; }
+.hero h1 { color: #fff; font-size: clamp(2.6rem, 9vw, 5.2rem); font-weight: 900; }
+.hero h1 em { font-style: normal; color: var(--amber); }
+.hero p { max-width: 60ch; font-size: 1.1rem; opacity: .92; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 4px 0 0; }
+.facts li { border: 1px solid rgba(255,255,255,.3); border-radius: 999px; padding: 4px 12px; font-size: .9rem; }
+.waves { display: block; width: 100%; height: 28px; color: var(--granite); margin-top: -27px; position: relative; }
+
+/* Raisons */
+.why { padding-block: 32px 8px; }
+.why ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.why li { background: var(--surface); border-top: 4px solid var(--amber); padding: 16px; border-radius: 4px; }
+.why li b { display: block; font-family: var(--display); text-transform: uppercase; font-size: 1.35rem; color: var(--sea); margin-bottom: 4px; }
+.why li p { color: var(--muted); font-size: .95rem; }
+
+/* Choix du chemin */
+.paths { padding-block: 28px 8px; display: grid; gap: 14px; }
+.paths h2 { font-size: clamp(1.8rem, 5vw, 2.6rem); }
+.choice { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.path { text-align: left; font: inherit; color: inherit; background: var(--surface); border: 2px solid var(--line); border-radius: 6px; padding: 18px; cursor: pointer; display: grid; gap: 6px; }
+.path:hover { border-color: var(--sea); }
+.path[aria-selected="true"] { border-color: var(--sea); box-shadow: inset 0 0 0 1px var(--sea); background: var(--sea-soft); }
+.path .tag { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; color: var(--amber-ink); }
+.path b { font-family: var(--display); font-size: 1.7rem; text-transform: uppercase; color: var(--sea); line-height: 1; }
+.path span { color: var(--muted); font-size: .95rem; }
+
+/* Formulaire */
+.panel { padding-block: 16px 40px; }
+.layout { display: grid; gap: 20px; }
+@media (min-width: 920px) { .layout { grid-template-columns: minmax(0, 1fr) 330px; align-items: start; } .side { position: sticky; top: 12px; } }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 22px; min-width: 0; }
+.steps { list-style: none; padding: 0; margin: 0 0 18px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.steps li { font-size: .82rem; color: var(--muted); border-top: 4px solid var(--line); padding-top: 6px; }
+.steps li.on { color: var(--sea); font-weight: 700; border-color: var(--sea); }
+.steps li.done { color: var(--ink); border-color: var(--ok); }
+.card h3 { font-size: 1.8rem; margin-bottom: 14px; }
+fieldset { border: 0; padding: 0; margin: 0 0 16px; min-width: 0; }
+legend { font-weight: 700; margin-bottom: 8px; padding: 0; }
+.seg { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.opt { position: relative; border: 2px solid var(--line); border-radius: 6px; padding: 12px; cursor: pointer; font-weight: 700; display: flex; gap: 8px; align-items: center; background: var(--surface); }
+.opt:has(input:checked) { border-color: var(--sea); background: var(--sea-soft); }
+.opt:has(input:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
+.opt input { accent-color: var(--sea); width: 18px; height: 18px; margin: 0; }
+.grid2 { display: grid; gap: 0 14px; }
+@media (min-width: 600px) { .grid2 { grid-template-columns: 1fr 1fr; } .span2 { grid-column: span 2; } }
+.field { margin-bottom: 14px; min-width: 0; }
+.field label { display: block; font-weight: 700; font-size: .95rem; margin-bottom: 4px; }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--ink); padding: 10px 12px; min-height: 46px; border: 1px solid #8995a1; border-radius: 4px; background: var(--surface); }
+.field textarea { min-height: 90px; resize: vertical; }
+.field .hint { font-size: .85rem; color: var(--muted); margin-top: 4px; }
+.field.bad input, .field.bad select { border: 2px solid var(--err); }
+.field .err { color: var(--err); font-size: .88rem; font-weight: 700; margin-top: 4px; }
+.sub { font-family: var(--display); text-transform: uppercase; color: var(--sea); font-size: 1.2rem; margin: 8px 0 10px; }
+.tiers { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin-bottom: 12px; }
+.tier { position: relative; border: 2px solid var(--line); border-radius: 6px; padding: 14px; cursor: pointer; display: grid; gap: 2px; align-content: start; background: var(--surface); }
+.tier:has(input:checked) { border-color: var(--sea); background: var(--sea-soft); }
+.tier:has(input:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
+.tier input { position: absolute; inset: 0; opacity: 0; cursor: pointer; margin: 0; }
+.tier .name { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; color: var(--amber-ink); }
+.tier .amt { font-family: var(--display); font-size: 2rem; font-weight: 800; color: var(--sea); line-height: 1.05; font-variant-numeric: tabular-nums; }
+.tier .net { font-size: .82rem; color: var(--muted); }
+.tier .pop { position: absolute; top: -10px; right: 10px; background: var(--amber); color: var(--ink); font-size: .7rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; text-transform: uppercase; letter-spacing: .05em; }
+.tier ul { margin: 6px 0 0; padding-left: 18px; font-size: .85rem; color: var(--ink); }
+.tier ul li { margin-bottom: 2px; }
+.field label.check, .check { display: flex; font-weight: 400; gap: 10px; align-items: flex-start; font-size: .92rem; }
+.check input { width: 20px; height: 20px; margin-top: 3px; flex: none; accent-color: var(--sea); }
+.recap { background: var(--sea-soft); border-radius: 6px; padding: 14px 16px; margin: 6px 0 14px; }
+.recap dl { margin: 0; display: grid; gap: 0; }
+.recap dl div { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #c7d5e0; }
+.recap dl div:last-child { border-bottom: 0; }
+.recap dt { color: var(--muted); }
+.recap dd { margin: 0; font-weight: 700; text-align: right; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.lockline { color: var(--ok); font-weight: 700; font-size: .95rem; margin-bottom: 10px; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+.btn { font: inherit; font-weight: 700; min-height: 48px; padding: 10px 20px; border-radius: 4px; cursor: pointer; border: 2px solid var(--sea); }
+.btn.primary { background: var(--sea); color: #fff; }
+.btn.primary:hover { background: #0a2236; }
+.btn.amber { background: var(--amber); border-color: var(--amber); color: var(--ink); }
+.btn.ghost { background: transparent; color: var(--sea); }
+@media (max-width: 480px) { .actions .btn { width: 100%; } }
+.alert { border-left: 4px solid var(--err); background: var(--err-soft); padding: 10px 14px; border-radius: 4px; margin-bottom: 14px; font-size: .95rem; }
+.alert ul { margin: 4px 0 0; padding-left: 18px; }
+.note { border-left: 4px solid var(--sea); background: var(--sea-soft); padding: 10px 14px; border-radius: 4px; font-size: .92rem; }
+.todo { background: #fff3d6; color: var(--amber-ink); font-weight: 700; padding: 0 4px; border-radius: 3px; }
+
+/* Encart reçu fiscal */
+.side .card { border-top: 6px solid var(--amber); }
+.side h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.side ul { padding-left: 18px; margin: 0 0 12px; font-size: .93rem; }
+.side li { margin-bottom: 6px; }
+.badge-ig { display: inline-block; background: var(--ok-soft); color: var(--ok); font-weight: 700; font-size: .82rem; padding: 3px 10px; border-radius: 999px; margin-bottom: 10px; }
+
+/* Confirmation */
+.done-card { text-align: left; display: grid; gap: 12px; max-width: 680px; margin: 0 auto; }
+.done-card h3 { font-size: 2.4rem; }
+.pill { display: inline-block; background: var(--ok-soft); color: var(--ok); font-weight: 700; padding: 4px 12px; border-radius: 999px; font-size: .9rem; }
+
+footer { background: var(--sea); color: #dfe8ef; font-size: .9rem; }
+footer .wrap { padding-block: 22px; display: grid; gap: 4px; }
+footer a { color: #fff; }
+@media (prefers-reduced-motion: no-preference) { .path, .tier, .opt { transition: border-color .15s, background-color .15s; } }
+</style>
+
+<div class="demo"><div class="wrap"><strong>Maquette</strong> Démonstration pour le board : aucun paiement, aucune donnée n'est envoyée.</div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#don" aria-label="Pab Fest, accueil"><b>PAB<i>·</i>FEST</b><span>Île de Batz</span></a>
+    <span class="secure"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Paiement sécurisé HelloAsso</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Soutenez le festival <em>de l'île</em></h1>
+    <p>Bières artisanales bretonnes et musiques du monde, à 15 minutes de bateau de Roscoff. Votre soutien garde le Pab Fest en entrée libre et fait vivre l'île de Batz.</p>
+    <ul class="facts" aria-label="Le festival en bref">
+      <li>Depuis 2024</li><li>Entrée libre</li><li>Brasseries bretonnes</li><li>Association d'intérêt général</li>
+    </ul>
+  </div>
+</section>
+<svg class="waves" viewBox="0 0 1200 28" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 28V14c50 0 50-12 100-12s50 12 100 12 50-12 100-12 50 12 100 12 50-12 100-12 50 12 100 12 50-12 100-12 50 12 100 12 50-12 100-12 50 12 100 12 50-12 100-12 50 12 100 12v14z"/></svg>
+
+<section class="why wrap" aria-labelledby="why-t">
+  <h2 id="why-t" class="sr-only">Pourquoi soutenir</h2>
+  <ul>
+    <li><b>La vie de l'île</b><p>Un week-end qui fait travailler les commerces, les hébergeurs et la traversée.</p></li>
+    <li><b>Les artistes</b><p>Des groupes de musiques du monde rémunérés, une scène ouverte à tous.</p></li>
+    <li><b>Les brasseurs</b><p>Une vitrine pour les brasseries artisanales bretonnes.</p></li>
+    <li><b>Un reçu fiscal</b><p>Envoyé automatiquement par HelloAsso, au nom de l'association.</p></li>
+  </ul>
+</section>
+
+<section class="paths wrap" aria-labelledby="paths-t">
+  <h2 id="paths-t">Comment voulez-vous soutenir ?</h2>
+  <div class="choice" role="tablist" aria-label="Type de soutien">
+    <button class="path" role="tab" id="tab-don" aria-controls="view-form" aria-selected="true" data-path="don">
+      <span class="tag">Mécénat · jusqu'à 500 €</span><b>Faire un don</b><span>Particuliers et entreprises. Reçu fiscal automatique.</span>
+    </button>
+    <button class="path" role="tab" id="tab-partenaire" aria-controls="view-form" aria-selected="false" data-path="partenaire">
+      <span class="tag">Partenariat · dès 750 €</span><b>Devenir partenaire</b><span>Entreprises. Visibilité sur le festival et reçu fiscal.</span>
+    </button>
+  </div>
+</section>
+
+<section class="panel wrap" id="view-form" aria-live="polite">
+  <div class="layout">
+    <div class="card" id="form-card">
+      <ol class="steps" aria-label="Étapes">
+        <li id="st1" class="on">1 · Vos informations</li>
+        <li id="st2">2 · Votre soutien</li>
+        <li id="st3">3 · Votre reçu</li>
+      </ol>
+      <div id="alert" class="alert" role="alert" tabindex="-1" hidden></div>
+
+      <form id="f1" novalidate>
+        <h3 id="f1-title">Vos informations</h3>
+        <fieldset id="who-set">
+          <legend>Vous donnez en tant que</legend>
+          <div class="seg">
+            <label class="opt"><input type="radio" name="who" id="who-co" value="co"> Entreprise</label>
+            <label class="opt"><input type="radio" name="who" id="who-pp" value="pp" checked> Particulier</label>
+          </div>
+        </fieldset>
+        <div class="grid2" id="co-fields" hidden>
+          <div class="field span2"><label for="company">Raison sociale *</label><input id="company" autocomplete="organization"></div>
+          <div class="field"><label for="siren">SIREN</label><input id="siren" inputmode="numeric" placeholder="9 chiffres"><p class="hint">Facultatif</p></div>
+          <div class="field"><label for="phone">Téléphone</label><input id="phone" type="tel" autocomplete="tel"><p class="hint">Pour organiser votre visibilité</p></div>
+        </div>
+        <div class="grid2">
+          <div class="field"><label for="first">Prénom *</label><input id="first" autocomplete="given-name"></div>
+          <div class="field"><label for="last">Nom *</label><input id="last" autocomplete="family-name"></div>
+          <div class="field span2"><label for="email">Email *</label><input id="email" type="email" autocomplete="email"><p class="hint">Votre reçu fiscal sera envoyé à cette adresse.</p></div>
+          <div class="field span2"><label for="addr">Adresse *</label><input id="addr" autocomplete="street-address"></div>
+          <div class="field"><label for="zip">Code postal *</label><input id="zip" autocomplete="postal-code" inputmode="numeric"></div>
+          <div class="field"><label for="city">Ville *</label><input id="city" autocomplete="address-level2"></div>
+        </div>
+        <div class="field"><label class="check"><input type="checkbox" id="rgpd"> <span>J'accepte que mes données soient transmises à HelloAsso et utilisées par le Pab Fest pour traiter mon soutien et émettre mon reçu fiscal (<a href="#don">politique de confidentialité</a>). *</span></label></div>
+        <div class="actions"><button type="submit" class="btn primary">Continuer</button></div>
+      </form>
+
+      <form id="f2" novalidate hidden>
+        <h3 id="f2-title">Votre don</h3>
+
+        <div id="don-tiers">
+          <fieldset>
+            <legend>Choisissez un montant (don ponctuel)</legend>
+            <div class="tiers">
+              <label class="tier"><input type="radio" name="amt" value="100"><span class="name">Le Demi</span><span class="amt">100 €</span><span class="net" data-net="100"></span></label>
+              <label class="tier"><input type="radio" name="amt" value="250"><span class="name">La Pinte</span><span class="amt">250 €</span><span class="net" data-net="250"></span></label>
+              <label class="tier"><span class="pop">Le plus utile</span><input type="radio" name="amt" value="400" checked><span class="name">La Tournée</span><span class="amt">400 €</span><span class="net" data-net="400"></span></label>
+              <label class="tier"><input type="radio" name="amt" value="500"><span class="name">Le Pichet</span><span class="amt">500 €</span><span class="net" data-net="500"></span></label>
+            </div>
+          </fieldset>
+          <div class="field" style="max-width:260px"><label for="free">Autre montant (€)</label><input id="free" inputmode="decimal" placeholder="Entre 1 et 500"></div>
+          <p class="note" id="upsell" hidden>Au-delà de 500 €, découvrez nos <a href="#partenaire">offres partenaires</a> : même reçu fiscal, avec de la visibilité en plus.</p>
+        </div>
+
+        <div id="part-tiers" hidden>
+          <fieldset>
+            <legend>Choisissez votre formule</legend>
+            <div class="tiers">
+              <label class="tier"><input type="radio" name="pamt" value="750" checked><span class="name">Partenaire Fût</span><span class="amt">750 €</span><span class="net" data-net-co="750"></span>
+                <ul><li>Logo sur le site</li><li>Merci collectif sur Instagram</li><li>Nom sur le panneau partenaires</li></ul></label>
+              <label class="tier"><input type="radio" name="pamt" value="1500"><span class="name">Partenaire Tireuse</span><span class="amt">1 500 €</span><span class="net" data-net-co="1500"></span>
+                <ul><li>Tout le Fût</li><li>Logo sur les t-shirts bénévoles</li><li>Post Instagram dédié</li></ul></label>
+              <label class="tier"><input type="radio" name="pamt" value="3000"><span class="name">Partenaire Brasseur</span><span class="amt">3 000 €</span><span class="net" data-net-co="3000"></span>
+                <ul><li>Toute la Tireuse</li><li>Logo sur l'affiche</li><li>Stand brandé à votre nom</li></ul></label>
+            </div>
+          </fieldset>
+          <div class="field"><label for="pmsg">Votre message (facultatif)</label><textarea id="pmsg" placeholder="Ex. : nous souhaitons tenir un stand le samedi"></textarea></div>
+          <div class="field"><label class="check"><input type="checkbox" id="logo-ok"> <span>J'autorise le Pab Fest à utiliser le nom et le logo de mon entreprise sur ses supports. Le logo vous sera demandé par email après le paiement.</span></label></div>
+          <p class="note">Les contreparties sont valorisées dans la limite de 25 % du don, règle qui préserve votre reçu fiscal de mécénat. <span class="todo">[À valider par le trésorier]</span></p>
+        </div>
+
+        <div class="recap" aria-labelledby="recap-t">
+          <p class="sub" id="recap-t">Récapitulatif</p>
+          <dl>
+            <div><dt>Montant</dt><dd id="r-amt">—</dd></div>
+            <div><dt>Bénéficiaire</dt><dd>Association Pab Fest <span class="todo">[nom officiel]</span></dd></div>
+            <div><dt>Donateur</dt><dd id="r-who">—</dd></div>
+            <div><dt>Reçu fiscal envoyé à</dt><dd id="r-mail">—</dd></div>
+          </dl>
+        </div>
+        <p class="lockline">Paiement sécurisé réalisé sur HelloAsso. Aucune donnée bancaire n'est saisie sur ce site.</p>
+        <div class="actions">
+          <button type="button" class="btn ghost" id="back">Modifier mes informations</button>
+          <button type="submit" class="btn amber" id="pay">Payer sur HelloAsso</button>
+        </div>
+      </form>
+
+      <div id="f3" class="done-card" hidden tabindex="-1">
+        <span class="pill">Simulation · paiement confirmé par HelloAsso</span>
+        <h3>Merci, vous faites vivre l'île !</h3>
+        <p id="done-text"></p>
+        <div class="note">
+          <p><b>Ce qui se passe ensuite (automatique)</b></p>
+          <ol style="margin:6px 0 0;padding-left:18px">
+            <li>HelloAsso envoie la confirmation et le reçu fiscal à <b id="done-mail"></b>.</li>
+            <li>Le Pab Fest reçoit le don dans HelloAsso ; la ligne du contact passe à « Donateur » dans le fichier de suivi.</li>
+            <li>Un email de remerciement personnalisé part depuis la boîte du festival.</li>
+            <li id="done-part" hidden>Partenaire : nous vous demandons votre logo et calons la visibilité avec vous.</li>
+          </ol>
+        </div>
+        <div class="actions" style="justify-content:flex-start"><button class="btn primary" id="again" type="button">Recommencer la démonstration</button></div>
+      </div>
+    </div>
+
+    <aside class="side" aria-labelledby="recu-t">
+      <div class="card">
+        <span class="badge-ig">Intérêt général · rescrit fiscal obtenu</span>
+        <h3 id="recu-t">Votre reçu fiscal</h3>
+        <ul>
+          <li>Émis automatiquement par HelloAsso au nom du Pab Fest.</li>
+          <li>Envoyé par email à l'adresse saisie, et disponible dans votre espace HelloAsso.</li>
+          <li>Pensez à vérifier vos spams. Délai : <span class="todo">[à confirmer]</span></li>
+        </ul>
+        <p class="note">Réduction d'impôt <span class="todo">[taux à valider]</span> : 66 % pour un particulier, 60 % pour une entreprise, dans les limites légales. Un don de 250 € coûte ainsi 85 € à un particulier.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b>Pab Fest</b> · Association Mignoned ar Pab · Île de Batz (29)</p>
+    <p>Paiements traités par HelloAsso. Contact : <span class="todo">[contact@pabfest]</span></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var path = "don";
+  var RATE = { pp: 0.66, co: 0.60 }; // taux légaux à valider par le trésorier
+  var eur = function (n) { return new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(n); };
+
+  function who() { return document.querySelector("input[name=who]:checked").value; }
+
+  function refreshNets() {
+    var r = RATE[who()];
+    document.querySelectorAll("[data-net]").forEach(function (el) {
+      el.textContent = "soit " + eur(Math.round(el.dataset.net * (1 - r))) + " après impôt";
+    });
+    document.querySelectorAll("[data-net-co]").forEach(function (el) {
+      el.textContent = "soit " + eur(Math.round(el.dataset.netCo * (1 - RATE.co))) + " après impôt";
+    });
+  }
+
+  function setStep(n) {
+    ["st1", "st2", "st3"].forEach(function (id, i) {
+      $(id).className = i + 1 < n ? "done" : i + 1 === n ? "on" : "";
+    });
+    $("f1").hidden = n !== 1; $("f2").hidden = n !== 2; $("f3").hidden = n !== 3;
+  }
+
+  function setPath(p, fromHash) {
+    path = p;
+    $("tab-don").setAttribute("aria-selected", p === "don");
+    $("tab-partenaire").setAttribute("aria-selected", p === "partenaire");
+    if (p === "partenaire") { $("who-co").checked = true; $("who-pp").disabled = true; }
+    else { $("who-pp").disabled = false; }
+    $("co-fields").hidden = who() !== "co";
+    $("don-tiers").hidden = p !== "don";
+    $("part-tiers").hidden = p !== "partenaire";
+    $("f2-title").textContent = p === "don" ? "Votre don" : "Votre partenariat";
+    refreshNets(); hideAlert();
+    if (!fromHash && location.hash !== "#" + p) history.replaceState(null, "", "#" + p);
+    setStep($("f2").hidden ? 1 : 2);
+  }
+
+  function amount() {
+    if (path === "partenaire") return +document.querySelector("input[name=pamt]:checked").value;
+    var free = $("free").value.trim().replace(",", ".");
+    if (free) return Number(free);
+    var c = document.querySelector("input[name=amt]:checked");
+    return c ? +c.value : NaN;
+  }
+
+  function showAlert(list) {
+    var a = $("alert");
+    a.innerHTML = "<b>Merci de corriger :</b><ul>" + list.map(function (e) { return "<li>" + e + "</li>"; }).join("") + "</ul>";
+    a.hidden = false; a.focus();
+  }
+  function hideAlert() { $("alert").hidden = true; document.querySelectorAll(".field.bad").forEach(function (f) { f.classList.remove("bad"); }); }
+  function mark(id) { $(id).closest(".field").classList.add("bad"); }
+
+  function updateRecap() {
+    var a = amount();
+    $("r-amt").textContent = isFinite(a) && a > 0 ? eur(a) + (path === "partenaire" ? " · formule partenaire" : "") : "—";
+    $("r-who").textContent = who() === "co" ? ($("company").value || "—") : (($("first").value + " " + $("last").value).trim() || "—");
+    $("r-mail").textContent = $("email").value || "—";
+    $("upsell").hidden = !(path === "don" && a >= 500);
+  }
+
+  document.querySelectorAll("input[name=who]").forEach(function (r) {
+    r.addEventListener("change", function () { $("co-fields").hidden = who() !== "co"; refreshNets(); });
+  });
+  document.querySelectorAll(".path").forEach(function (b) {
+    b.addEventListener("click", function () { setPath(b.dataset.path); });
+  });
+
+  $("f1").addEventListener("submit", function (e) {
+    e.preventDefault(); hideAlert();
+    var errs = [];
+    var req = [["first", "Le prénom est obligatoire."], ["last", "Le nom est obligatoire."], ["addr", "L'adresse est obligatoire."], ["zip", "Le code postal est obligatoire."], ["city", "La ville est obligatoire."]];
+    if (who() === "co") req.unshift(["company", "La raison sociale est obligatoire."]);
+    req.forEach(function (r) { if (!$(r[0]).value.trim()) { errs.push(r[1]); mark(r[0]); } });
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($("email").value.trim())) { errs.push("Adresse email invalide."); mark("email"); }
+    if ($("siren").value.trim() && !/^\d{9}$/.test($("siren").value.replace(/\s/g, ""))) { errs.push("Le SIREN comporte 9 chiffres."); mark("siren"); }
+    if (!$("rgpd").checked) errs.push("Votre consentement est nécessaire pour continuer.");
+    if (errs.length) return showAlert(errs);
+    setStep(2); updateRecap(); $("f2-title").setAttribute("tabindex", "-1"); $("f2-title").focus();
+  });
+
+  $("f2").addEventListener("input", updateRecap);
+  $("f2").addEventListener("change", function (e) { if (e.target.name === "amt") $("free").value = ""; updateRecap(); });
+  $("free").addEventListener("input", function () { if (this.value) document.querySelectorAll("input[name=amt]").forEach(function (r) { r.checked = false; }); });
+  $("back").addEventListener("click", function () { setStep(1); hideAlert(); });
+
+  $("f2").addEventListener("submit", function (e) {
+    e.preventDefault(); hideAlert();
+    var a = amount();
+    if (path === "don" && !(a >= 1 && a <= 500)) { mark("free"); return showAlert(["Le don en ligne va de 1 à 500 €. Au-delà, choisissez « Devenir partenaire »."]); }
+    if (path === "partenaire" && !$("logo-ok").checked) return showAlert(["Cochez l'autorisation d'utiliser votre logo."]);
+    $("done-text").textContent = "Votre " + (path === "don" ? "don" : "partenariat") + " de " + eur(a) + " a bien été confirmé. Dans la version réelle, cette page n'affiche « confirmé » qu'après vérification auprès de HelloAsso.";
+    $("done-mail").textContent = $("email").value;
+    $("done-part").hidden = path !== "partenaire";
+    setStep(3); $("f3").focus();
+  });
+
+  $("again").addEventListener("click", function () { setStep(1); });
+
+  function route() {
+    var h = location.hash.replace("#", "");
+    setPath(h === "partenaire" ? "partenaire" : "don", true);
+  }
+  window.addEventListener("hashchange", route);
+  route(); setStep(1);
+})();
+</script>
