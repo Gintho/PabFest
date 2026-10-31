@@ -106,7 +106,7 @@ legend { font-weight: 700; margin-bottom: 8px; padding: 0; }
 .field .err { color: var(--err); font-size: .88rem; font-weight: 700; margin-top: 4px; }
 .sub { font-family: var(--display); text-transform: uppercase; color: var(--sea); font-size: 1.2rem; margin: 8px 0 10px; }
 .tiers { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin-bottom: 12px; }
-#part-tiers .tiers { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+#part-tiers .tiers { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .tier { position: relative; border: 2px solid var(--line); border-radius: 6px; padding: 14px; cursor: pointer; display: grid; gap: 2px; align-content: start; background: var(--surface); }
 .tier:has(input:checked) { border-color: var(--sea); background: var(--sea-soft); }
 .tier:has(input:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
@@ -256,18 +256,16 @@ footer a { color: #fff; }
             <legend>Choisissez votre palier</legend>
             <div class="tiers">
               <label class="tier"><input type="radio" name="pamt" value="300"><span class="name">La Pinte</span><span class="amt">300 €</span><span class="net" data-net="300"></span>
-                <ul><li>Nom ou logo sur le site</li><li>Merci collectif sur Instagram</li></ul></label>
+                <ul><li>Nom et logo sur les supports de communication du festival</li></ul></label>
               <label class="tier"><span class="pop">Conseillé</span><input type="radio" name="pamt" value="500" checked><span class="name">La Tournée</span><span class="amt">500 €</span><span class="net" data-net="500"></span>
-                <ul><li>La Pinte</li><li>Panneau des soutiens au festival</li></ul></label>
+                <ul><li>La Pinte</li><li>Panneau des soutiens sur le festival</li><li>Communication Instagram</li><li>Invitation à la soirée d'ouverture</li></ul></label>
               <label class="tier"><input type="radio" name="pamt" value="1000"><span class="name">Le Fût</span><span class="amt">1 000 €</span><span class="net" data-net="1000"></span>
-                <ul><li>La Tournée</li><li>Logo sur les t-shirts bénévoles</li><li>Post Instagram dédié</li></ul></label>
-              <label class="tier"><input type="radio" name="pamt" value="2000"><span class="name">La Tireuse</span><span class="amt">2 000 €</span><span class="net" data-net="2000"></span>
-                <ul><li>Le Fût</li><li>Logo sur l'affiche</li></ul></label>
-              <label class="tier"><input type="radio" name="pamt" value="3500"><span class="name">Le Brasseur</span><span class="amt">3 500 €</span><span class="net" data-net="3500"></span>
-                <ul><li>La Tireuse</li><li>Stand à vos couleurs</li></ul></label>
+                <ul><li>La Tournée</li><li>Post Instagram dédié</li><li>Logo sur les t-shirts bénévoles</li></ul></label>
+              <label class="tier"><input type="radio" name="pamt" value="2000"><span class="name">Le Brasseur</span><span class="amt">dès 2 000 €</span><span class="net" data-net="2000"></span>
+                <ul><li>Le Fût</li><li>Campagne sur mesure : scène à vos couleurs, bâche avec votre logo sur scène…</li><li>Nous vous rappelons pour la construire</li></ul></label>
             </div>
           </fieldset>
-          <div class="field"><label for="pmsg">Votre message (facultatif)</label><textarea id="pmsg" placeholder="Ex. : nous souhaitons tenir un stand le samedi"></textarea></div>
+          <div class="field"><label for="pmsg">Votre message (facultatif)</label><textarea id="pmsg" placeholder="Ex. : Brasseur, nous aimerions une scène à nos couleurs le samedi"></textarea></div>
           <div class="field"><label class="check"><input type="checkbox" id="logo-ok"> <span>J'autorise le Pab Fest à afficher mon nom ou le logo de mon entreprise sur ses supports. Le logo vous sera demandé par email après le paiement.</span></label></div>
           <p class="note">Les contreparties sont valorisées dans la limite de 25 % du don, règle qui préserve votre reçu fiscal. <span class="todo">[À valider par le trésorier]</span></p>
         </div>

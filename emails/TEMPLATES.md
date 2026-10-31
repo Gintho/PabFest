@@ -1,6 +1,19 @@
 # Templates de mails — campagne Partenaires & Mécénat Pab Fest
 
-Grille 2027 : don classique de 1 à 250 € ; paliers avec visibilité dès 300 € (Pinte 300, Tournée 500, Fût 1 000, Tireuse 2 000, Brasseur 3 500).
+Grille 2027 : don classique de 1 à 250 € ; paliers avec visibilité dès 300 € :
+- **La Pinte (300 €)** : nom et logo sur les supports de communication du festival.
+- **La Tournée (500 €, conseillée)** : + panneau des soutiens sur le site du festival, communication Instagram, invitation à la soirée d'ouverture.
+- **Le Fût (1 000 €)** : + post Instagram dédié, logo sur les t-shirts bénévoles.
+- **Le Brasseur (dès 2 000 €)** : + campagne sur mesure (scène à vos couleurs, bâche avec logo sur scène, concert à votre nom, bar ou stand brandé, gobelets à votre logo, logo sur l'affiche, photos et vidéos, visite de la Microbrasserie PAB).
+
+Toutes les contreparties restent valorisées sous 25 % du don [à valider par le trésorier].
+
+Calendrier 2026–2027 :
+- Fin octobre : envoi de la base prospects · Mi-novembre : validation de la base
+- Mi-novembre : EB1 early bird (donateurs 2025), puis EB2 une semaine après
+- Fin novembre (au plus tard début décembre) : **J0**, tout doit être prêt (page, paiement testé, reçus fiscaux activés, mails relus)
+- Décembre : argument clôture comptable, pas de relance pendant les fêtes
+- Début janvier : J+7 (relance de rentrée) · Mi-janvier : J+14 · Fin janvier : J+21
 
 Envoi depuis Gmail (publipostage depuis le fichier Google Sheets « Suivi mécénat »).
 Variables entre `{{ }}` = colonnes du fichier de suivi. `[…]` = à compléter par le bureau.
@@ -18,9 +31,9 @@ Règles d'envoi :
 | EB1 | J-14 (donateurs 2025) | Early bird |
 | EB2 | J-7 (donateurs 2025) | Relance early bird + appel du référent |
 | 1 | J0 | Présentation |
-| 2 | J+7 | Relance courte |
-| 3 | J+14 | Relance « impact local » |
-| 4 | J+21 | Dernière relance |
+| 2 | J+7 (début janvier) | Relance de rentrée |
+| 3 | J+14 (mi-janvier) | Relance « impact local » |
+| 4 | J+21 (fin janvier) | Dernière relance |
 | 5 | après un don | Merci donateur |
 | 6 | après un palier dès 300 € | Merci + demande de logo |
 
@@ -95,9 +108,9 @@ Chaque mois de juin, le **Pab Fest** réunit sur l'île de Batz les brasseries a
 
 Pour l'édition [2027], nous cherchons des entreprises du territoire prêtes à nous soutenir. Trois raisons de le faire :
 
-**1. Votre soutien est déductible.** Le Pab Fest est une association reconnue d'intérêt général, confirmé par un **rescrit fiscal**. Chaque don ouvre droit à un **reçu fiscal, envoyé automatiquement** par HelloAsso. Pour une entreprise, la réduction d'impôt est de [60 %] du montant : un soutien de 500 € vous coûte réellement [200 €].
+**1. Votre soutien est déductible.** Le Pab Fest est une association reconnue d'intérêt général, confirmé par un **rescrit fiscal**. Chaque don ouvre droit à un **reçu fiscal, envoyé automatiquement** par HelloAsso. Pour une entreprise, la réduction d'impôt est de [60 %] du montant : un soutien de 500 € vous coûte réellement [200 €]. Et un don versé avant le 31 décembre compte sur votre exercice 2026.
 
-**2. Vous êtes visible.** Dès 300 €, votre logo apparaît sur notre site ; selon le palier, il s'affiche aussi sur nos t-shirts, notre affiche, nos posts Instagram, et jusqu'à un stand à vos couleurs pendant le festival.
+**2. Vous êtes visible.** Dès 300 €, votre nom et votre logo figurent sur nos supports de communication ; selon le palier : panneau des soutiens, Instagram, invitation à la soirée d'ouverture, t-shirts des bénévoles, et jusqu'à une campagne sur mesure avec une scène à vos couleurs.
 
 **3. Vous faites vivre l'île.** Votre soutien reste ici : il rémunère les artistes, accueille les brasseurs locaux et garde le festival ouvert à tous.
 
@@ -117,15 +130,15 @@ Je suis disponible pour en parler de vive voix : [téléphone].
 
 ---
 
-## Mail 2 — J+7 · Relance courte
+## Mail 2 — J+7 · Relance de rentrée (début janvier)
 
-**Objet :** Re: le Pab Fest a besoin de {{Entreprise}}
+**Objet :** Bonne année ! Le Pab Fest 2027 compte sur {{Entreprise}}
 
 Bonjour {{Prénom}},
 
-Je me permets de revenir vers vous au sujet du Pab Fest [2027].
+Toute l'équipe du Pab Fest vous souhaite une belle année 2027 ! Je me permets de revenir vers vous au sujet de notre prochaine édition.
 
-En deux mots : un don dès 50 €, un **reçu fiscal automatique** (nous sommes reconnus d'intérêt général), et dès 300 € votre logo sur le festival.
+En deux mots : un don dès 50 €, un **reçu fiscal automatique** (nous sommes reconnus d'intérêt général), et dès 300 € votre nom et votre logo sur le festival.
 
 👉 https://[domaine]/soutenir?src=mail2
 
@@ -215,7 +228,9 @@ Votre **reçu fiscal** vous a été envoyé par HelloAsso à {{Email}}.
 Pour préparer votre visibilité, pouvez-vous nous répondre avec :
 1. votre logo en haute définition (SVG, PDF ou PNG fond transparent) ;
 2. le lien de votre site ou de votre compte Instagram ;
-3. [Palier Brasseur] vos disponibilités pour caler le stand.
+3. [Palier Brasseur] vos disponibilités pour un rendez-vous : nous construisons ensemble votre campagne sur mesure.
+
+[Tournée et plus] Votre invitation à la soirée d'ouverture vous parviendra en [mois].
 
 Calendrier : logo sur le site sous 7 jours, t-shirts imprimés le [date], post Instagram en [mois].
 
