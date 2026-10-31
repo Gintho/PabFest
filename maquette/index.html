@@ -27,6 +27,7 @@
   color-scheme: light;
 }
 *, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
 body { margin: 0; background: var(--granite); color: var(--ink); font: 17px/1.55 var(--body); }
 a { color: var(--sea); text-underline-offset: 3px; }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
@@ -105,6 +106,7 @@ legend { font-weight: 700; margin-bottom: 8px; padding: 0; }
 .field .err { color: var(--err); font-size: .88rem; font-weight: 700; margin-top: 4px; }
 .sub { font-family: var(--display); text-transform: uppercase; color: var(--sea); font-size: 1.2rem; margin: 8px 0 10px; }
 .tiers { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin-bottom: 12px; }
+#part-tiers .tiers { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
 .tier { position: relative; border: 2px solid var(--line); border-radius: 6px; padding: 14px; cursor: pointer; display: grid; gap: 2px; align-content: start; background: var(--surface); }
 .tier:has(input:checked) { border-color: var(--sea); background: var(--sea-soft); }
 .tier:has(input:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
@@ -188,10 +190,10 @@ footer a { color: #fff; }
   <h2 id="paths-t">Comment voulez-vous soutenir ?</h2>
   <div class="choice" role="tablist" aria-label="Type de soutien">
     <button class="path" role="tab" id="tab-don" aria-controls="view-form" aria-selected="true" data-path="don">
-      <span class="tag">Mécénat · jusqu'à 500 €</span><b>Faire un don</b><span>Particuliers et entreprises. Reçu fiscal automatique.</span>
+      <span class="tag">Don classique · jusqu'à 250 €</span><b>Faire un don</b><span>Particuliers et entreprises. Reçu fiscal automatique.</span>
     </button>
     <button class="path" role="tab" id="tab-partenaire" aria-controls="view-form" aria-selected="false" data-path="partenaire">
-      <span class="tag">Partenariat · dès 750 €</span><b>Devenir partenaire</b><span>Entreprises. Visibilité sur le festival et reçu fiscal.</span>
+      <span class="tag">Paliers · dès 300 €</span><b>Soutenir avec visibilité</b><span>Votre nom ou votre logo sur le festival, et votre reçu fiscal.</span>
     </button>
   </div>
 </section>
@@ -239,31 +241,35 @@ footer a { color: #fff; }
           <fieldset>
             <legend>Choisissez un montant (don ponctuel)</legend>
             <div class="tiers">
-              <label class="tier"><input type="radio" name="amt" value="100"><span class="name">Le Demi</span><span class="amt">100 €</span><span class="net" data-net="100"></span></label>
-              <label class="tier"><input type="radio" name="amt" value="250"><span class="name">La Pinte</span><span class="amt">250 €</span><span class="net" data-net="250"></span></label>
-              <label class="tier"><span class="pop">Le plus utile</span><input type="radio" name="amt" value="400" checked><span class="name">La Tournée</span><span class="amt">400 €</span><span class="net" data-net="400"></span></label>
-              <label class="tier"><input type="radio" name="amt" value="500"><span class="name">Le Pichet</span><span class="amt">500 €</span><span class="net" data-net="500"></span></label>
+              <label class="tier"><input type="radio" name="amt" value="50"><span class="amt">50 €</span><span class="net" data-net="50"></span></label>
+              <label class="tier"><input type="radio" name="amt" value="100"><span class="amt">100 €</span><span class="net" data-net="100"></span></label>
+              <label class="tier"><input type="radio" name="amt" value="150"><span class="amt">150 €</span><span class="net" data-net="150"></span></label>
+              <label class="tier"><input type="radio" name="amt" value="250" checked><span class="amt">250 €</span><span class="net" data-net="250"></span></label>
             </div>
           </fieldset>
-          <div class="field" style="max-width:260px"><label for="free">Autre montant (€)</label><input id="free" inputmode="decimal" placeholder="Entre 1 et 500"></div>
-          <p class="note" id="upsell" hidden>Au-delà de 500 €, découvrez nos <a href="#partenaire">offres partenaires</a> : même reçu fiscal, avec de la visibilité en plus.</p>
+          <div class="field" style="max-width:260px"><label for="free">Autre montant (€)</label><input id="free" inputmode="decimal" placeholder="Entre 1 et 250"></div>
+          <p class="note" id="upsell">Dès 300 €, votre nom ou votre logo apparaît sur le site du festival : <a href="#partenaire">voir les paliers</a>.</p>
         </div>
 
         <div id="part-tiers" hidden>
           <fieldset>
-            <legend>Choisissez votre formule</legend>
+            <legend>Choisissez votre palier</legend>
             <div class="tiers">
-              <label class="tier"><input type="radio" name="pamt" value="750" checked><span class="name">Partenaire Fût</span><span class="amt">750 €</span><span class="net" data-net-co="750"></span>
-                <ul><li>Logo sur le site</li><li>Merci collectif sur Instagram</li><li>Nom sur le panneau partenaires</li></ul></label>
-              <label class="tier"><input type="radio" name="pamt" value="1500"><span class="name">Partenaire Tireuse</span><span class="amt">1 500 €</span><span class="net" data-net-co="1500"></span>
-                <ul><li>Tout le Fût</li><li>Logo sur les t-shirts bénévoles</li><li>Post Instagram dédié</li></ul></label>
-              <label class="tier"><input type="radio" name="pamt" value="3000"><span class="name">Partenaire Brasseur</span><span class="amt">3 000 €</span><span class="net" data-net-co="3000"></span>
-                <ul><li>Toute la Tireuse</li><li>Logo sur l'affiche</li><li>Stand brandé à votre nom</li></ul></label>
+              <label class="tier"><input type="radio" name="pamt" value="300"><span class="name">La Pinte</span><span class="amt">300 €</span><span class="net" data-net="300"></span>
+                <ul><li>Nom ou logo sur le site</li><li>Merci collectif sur Instagram</li></ul></label>
+              <label class="tier"><span class="pop">Conseillé</span><input type="radio" name="pamt" value="500" checked><span class="name">La Tournée</span><span class="amt">500 €</span><span class="net" data-net="500"></span>
+                <ul><li>La Pinte</li><li>Panneau des soutiens au festival</li></ul></label>
+              <label class="tier"><input type="radio" name="pamt" value="1000"><span class="name">Le Fût</span><span class="amt">1 000 €</span><span class="net" data-net="1000"></span>
+                <ul><li>La Tournée</li><li>Logo sur les t-shirts bénévoles</li><li>Post Instagram dédié</li></ul></label>
+              <label class="tier"><input type="radio" name="pamt" value="2000"><span class="name">La Tireuse</span><span class="amt">2 000 €</span><span class="net" data-net="2000"></span>
+                <ul><li>Le Fût</li><li>Logo sur l'affiche</li></ul></label>
+              <label class="tier"><input type="radio" name="pamt" value="3500"><span class="name">Le Brasseur</span><span class="amt">3 500 €</span><span class="net" data-net="3500"></span>
+                <ul><li>La Tireuse</li><li>Stand à vos couleurs</li></ul></label>
             </div>
           </fieldset>
           <div class="field"><label for="pmsg">Votre message (facultatif)</label><textarea id="pmsg" placeholder="Ex. : nous souhaitons tenir un stand le samedi"></textarea></div>
-          <div class="field"><label class="check"><input type="checkbox" id="logo-ok"> <span>J'autorise le Pab Fest à utiliser le nom et le logo de mon entreprise sur ses supports. Le logo vous sera demandé par email après le paiement.</span></label></div>
-          <p class="note">Les contreparties sont valorisées dans la limite de 25 % du don, règle qui préserve votre reçu fiscal de mécénat. <span class="todo">[À valider par le trésorier]</span></p>
+          <div class="field"><label class="check"><input type="checkbox" id="logo-ok"> <span>J'autorise le Pab Fest à afficher mon nom ou le logo de mon entreprise sur ses supports. Le logo vous sera demandé par email après le paiement.</span></label></div>
+          <p class="note">Les contreparties sont valorisées dans la limite de 25 % du don, règle qui préserve votre reçu fiscal. <span class="todo">[À valider par le trésorier]</span></p>
         </div>
 
         <div class="recap" aria-labelledby="recap-t">
@@ -292,7 +298,7 @@ footer a { color: #fff; }
             <li>HelloAsso envoie la confirmation et le reçu fiscal à <b id="done-mail"></b>.</li>
             <li>Le Pab Fest reçoit le don dans HelloAsso ; la ligne du contact passe à « Donateur » dans le fichier de suivi.</li>
             <li>Un email de remerciement personnalisé part depuis la boîte du festival.</li>
-            <li id="done-part" hidden>Partenaire : nous vous demandons votre logo et calons la visibilité avec vous.</li>
+            <li id="done-part" hidden>Palier visibilité : nous vous demandons votre logo et calons la visibilité avec vous.</li>
           </ol>
         </div>
         <div class="actions" style="justify-content:flex-start"><button class="btn primary" id="again" type="button">Recommencer la démonstration</button></div>
@@ -335,9 +341,6 @@ footer a { color: #fff; }
     document.querySelectorAll("[data-net]").forEach(function (el) {
       el.textContent = "soit " + eur(Math.round(el.dataset.net * (1 - r))) + " après impôt";
     });
-    document.querySelectorAll("[data-net-co]").forEach(function (el) {
-      el.textContent = "soit " + eur(Math.round(el.dataset.netCo * (1 - RATE.co))) + " après impôt";
-    });
   }
 
   function setStep(n) {
@@ -351,12 +354,10 @@ footer a { color: #fff; }
     path = p;
     $("tab-don").setAttribute("aria-selected", p === "don");
     $("tab-partenaire").setAttribute("aria-selected", p === "partenaire");
-    if (p === "partenaire") { $("who-co").checked = true; $("who-pp").disabled = true; }
-    else { $("who-pp").disabled = false; }
-    $("co-fields").hidden = who() !== "co";
+        $("co-fields").hidden = who() !== "co";
     $("don-tiers").hidden = p !== "don";
     $("part-tiers").hidden = p !== "partenaire";
-    $("f2-title").textContent = p === "don" ? "Votre don" : "Votre partenariat";
+    $("f2-title").textContent = p === "don" ? "Votre don" : "Votre palier";
     refreshNets(); hideAlert();
     if (!fromHash && location.hash !== "#" + p) history.replaceState(null, "", "#" + p);
     setStep($("f2").hidden ? 1 : 2);
@@ -380,11 +381,10 @@ footer a { color: #fff; }
 
   function updateRecap() {
     var a = amount();
-    $("r-amt").textContent = isFinite(a) && a > 0 ? eur(a) + (path === "partenaire" ? " · formule partenaire" : "") : "—";
+    $("r-amt").textContent = isFinite(a) && a > 0 ? eur(a) + (path === "partenaire" ? " · palier visibilité" : "") : "—";
     $("r-who").textContent = who() === "co" ? ($("company").value || "—") : (($("first").value + " " + $("last").value).trim() || "—");
     $("r-mail").textContent = $("email").value || "—";
-    $("upsell").hidden = !(path === "don" && a >= 500);
-  }
+      }
 
   document.querySelectorAll("input[name=who]").forEach(function (r) {
     r.addEventListener("change", function () { $("co-fields").hidden = who() !== "co"; refreshNets(); });
@@ -414,9 +414,9 @@ footer a { color: #fff; }
   $("f2").addEventListener("submit", function (e) {
     e.preventDefault(); hideAlert();
     var a = amount();
-    if (path === "don" && !(a >= 1 && a <= 500)) { mark("free"); return showAlert(["Le don en ligne va de 1 à 500 €. Au-delà, choisissez « Devenir partenaire »."]); }
-    if (path === "partenaire" && !$("logo-ok").checked) return showAlert(["Cochez l'autorisation d'utiliser votre logo."]);
-    $("done-text").textContent = "Votre " + (path === "don" ? "don" : "partenariat") + " de " + eur(a) + " a bien été confirmé. Dans la version réelle, cette page n'affiche « confirmé » qu'après vérification auprès de HelloAsso.";
+    if (path === "don" && !(a >= 1 && a <= 250)) { mark("free"); return showAlert(["Le don classique va de 1 à 250 €. Au-delà, choisissez un palier avec visibilité (dès 300 €)."]); }
+    if (path === "partenaire" && !$("logo-ok").checked) return showAlert(["Cochez l'autorisation d'afficher votre nom ou votre logo."]);
+    $("done-text").textContent = "Votre " + (path === "don" ? "don" : "soutien") + " de " + eur(a) + " a bien été confirmé. Dans la version réelle, cette page n'affiche « confirmé » qu'après vérification auprès de HelloAsso.";
     $("done-mail").textContent = $("email").value;
     $("done-part").hidden = path !== "partenaire";
     setStep(3); $("f3").focus();

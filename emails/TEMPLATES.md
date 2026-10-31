@@ -1,5 +1,7 @@
 # Templates de mails — campagne Partenaires & Mécénat Pab Fest
 
+Grille 2027 : don classique de 1 à 250 € ; paliers avec visibilité dès 300 € (Pinte 300, Tournée 500, Fût 1 000, Tireuse 2 000, Brasseur 3 500).
+
 Envoi depuis Gmail (publipostage depuis le fichier Google Sheets « Suivi mécénat »).
 Variables entre `{{ }}` = colonnes du fichier de suivi. `[…]` = à compléter par le bureau.
 
@@ -18,7 +20,7 @@ Règles d'envoi :
 | 3 | J+14 | Relance « impact local » |
 | 4 | J+21 | Dernière relance |
 | 5 | après un don | Merci donateur |
-| 6 | après un partenariat | Merci partenaire + demande de logo |
+| 6 | après un palier dès 300 € | Merci + demande de logo |
 
 ---
 
@@ -33,9 +35,9 @@ Chaque mois de juin, le **Pab Fest** réunit sur l'île de Batz les brasseries a
 
 Pour l'édition [2027], nous cherchons des entreprises du territoire prêtes à nous soutenir. Trois raisons de le faire :
 
-**1. Votre soutien est déductible.** Le Pab Fest est une association reconnue d'intérêt général, confirmé par un **rescrit fiscal**. Chaque don ouvre droit à un **reçu fiscal, envoyé automatiquement** par HelloAsso. Pour une entreprise, la réduction d'impôt est de [60 %] du montant : un soutien de 750 € vous coûte réellement [300 €].
+**1. Votre soutien est déductible.** Le Pab Fest est une association reconnue d'intérêt général, confirmé par un **rescrit fiscal**. Chaque don ouvre droit à un **reçu fiscal, envoyé automatiquement** par HelloAsso. Pour une entreprise, la réduction d'impôt est de [60 %] du montant : un soutien de 500 € vous coûte réellement [200 €].
 
-**2. Vous êtes visible.** À partir de 750 €, devenez partenaire : logo sur notre site et nos t-shirts, posts Instagram, et jusqu'à un stand à vos couleurs pendant le festival.
+**2. Vous êtes visible.** Dès 300 €, votre logo apparaît sur notre site ; selon le palier, il s'affiche aussi sur nos t-shirts, notre affiche, nos posts Instagram, et jusqu'à un stand à vos couleurs pendant le festival.
 
 **3. Vous faites vivre l'île.** Votre soutien reste ici : il rémunère les artistes, accueille les brasseurs locaux et garde le festival ouvert à tous.
 
@@ -63,7 +65,7 @@ Bonjour {{Prénom}},
 
 Je me permets de revenir vers vous au sujet du Pab Fest [2027].
 
-En deux mots : un soutien à partir de 100 €, un **reçu fiscal automatique** (nous sommes reconnus d'intérêt général), et dès 750 € une visibilité sur le festival.
+En deux mots : un don dès 50 €, un **reçu fiscal automatique** (nous sommes reconnus d'intérêt général), et dès 300 € votre logo sur le festival.
 
 👉 https://[domaine]/soutenir?src=mail2
 
@@ -85,8 +87,8 @@ Bonjour {{Prénom}},
 Concrètement, voici à quoi sert un soutien au Pab Fest :
 
 - **100 €** : [une partie du cachet d'un groupe]
-- **400 €** : [la traversée et l'accueil d'une brasserie bretonne]
-- **1 500 €** : [une scène équipée pour une soirée] + votre logo sur les t-shirts des bénévoles
+- **500 €** : [l'accueil d'une brasserie bretonne] + votre nom sur le panneau des soutiens
+- **1 000 €** : [une scène équipée pour une soirée] + votre logo sur les t-shirts des bénévoles
 
 [Ajouter une photo de l'édition 2026]
 
@@ -109,7 +111,7 @@ Bonjour {{Prénom}},
 
 C'est mon dernier message à ce sujet, promis.
 
-Nous bouclons le budget du Pab Fest [2027] le [date limite]. Si {{Entreprise}} souhaite figurer parmi nos partenaires, il est encore temps :
+Nous bouclons le budget du Pab Fest [2027] le [date limite]. Si {{Entreprise}} souhaite figurer parmi nos soutiens, il est encore temps :
 
 👉 https://[domaine]/soutenir?src=mail4
 
@@ -140,20 +142,20 @@ Mille mercis,
 
 ---
 
-## Mail 6 — Merci partenaire + demande de logo
+## Mail 6 — Merci palier visibilité (dès 300 €) + demande de logo
 
-**Objet :** Bienvenue parmi les partenaires du Pab Fest, {{Entreprise}} !
+**Objet :** Bienvenue parmi les soutiens du Pab Fest, {{Entreprise}} !
 
 Bonjour {{Prénom}},
 
-Merci ! {{Entreprise}} rejoint les partenaires du Pab Fest [2027] avec la formule **{{Formule}}** ({{Montant}} €).
+Merci ! {{Entreprise}} rejoint les soutiens du Pab Fest [2027] avec le palier **{{Palier}}** ({{Montant}} €).
 
 Votre **reçu fiscal** vous a été envoyé par HelloAsso à {{Email}}.
 
 Pour préparer votre visibilité, pouvez-vous nous répondre avec :
 1. votre logo en haute définition (SVG, PDF ou PNG fond transparent) ;
 2. le lien de votre site ou de votre compte Instagram ;
-3. [Formule Brasseur] vos disponibilités pour caler le stand.
+3. [Palier Brasseur] vos disponibilités pour caler le stand.
 
 Calendrier : logo sur le site sous 7 jours, t-shirts imprimés le [date], post Instagram en [mois].
 
