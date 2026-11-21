@@ -6,15 +6,16 @@ TITLE = "Pab Fest 2027 · Les 6 mails de la campagne mécénat (version T1 à va
 STOP = "*Pour ne plus recevoir nos messages, répondez simplement « STOP ».*"
 SIGN = ["{{Signataire}}", "Pab Fest · association Mignoned ar Pab", "{{Téléphone}}"]
 
-RECAP = [
-    ("1", "Contributeurs 2025", "Les 15 entreprises qui ont donné, donné en nature ou promis en 2025", "Semaine du 23 novembre", "Renouveler, si possible au palier au-dessus"),
-    ("2", "Contacts d'Eric Grall", "13 entreprises recommandées par Eric, jamais donatrices", "Fin novembre, dès l'accord d'Eric, puis appel sous 48 h", "Premier contact chaleureux grâce à la recommandation"),
-    ("3", "Toute la base", "Environ 185 entreprises (hors mails 1 et 2, hors refus 2025)", "1er au 3 décembre, en 3 lots de 60 à 70", "Faire connaître le festival et les paliers"),
-    ("4", "Relance clôture 2026", "Tous ceux qui n'ont pas encore donné", "14 ou 15 décembre", "Don avant le 31/12 = déduction sur l'exercice 2026"),
-    ("5", "Relance de janvier", "Tous ceux qui n'ont pas encore donné", "6 ou 7 janvier", "Vœux et rappel simple"),
-    ("6", "Dernier appel de février", "Tous ceux qui n'ont pas encore donné", "2 ou 3 février", "Dernier message, avec les premiers partenaires 2027"),
-]
+TITLE = "Pab Fest 2027 · Les mails de lancement de la campagne mécénat"
 
+RECAP = [
+    ("1", "Contributeurs 2025", "Entreprises qui ont soutenu le Pab Fest en 2025 (en argent, en nature ou par une promesse)", "15", "Semaine du 23 novembre"),
+    ("2", "Contacts d'Eric Grall", "Entreprises recommandées par Eric Grall, jamais donatrices", "13", "Fin novembre"),
+    ("3", "Toute la base", "Les autres entreprises de la base (hors refus 2025)", "185", "1er au 3 décembre"),
+    ("4", "Relance clôture 2026", "Tous ceux qui n'ont pas encore donné", "jusqu'à 213", "14 ou 15 décembre"),
+    ("5", "Relance de janvier", "Tous ceux qui n'ont pas encore donné", "jusqu'à 213", "6 ou 7 janvier"),
+    ("6", "Relance de février", "Tous ceux qui n'ont pas encore donné", "jusqu'à 213", "2 ou 3 février"),
+]
 RULES = [
     "**On arrête d'écrire** à une entreprise dès qu'elle a donné, répondu ou écrit « STOP ». Avant chaque envoi, on filtre le fichier sur la colonne « Statut ».",
     "**Un seul lien par mail**, toujours le même formulaire. Seul le code de fin change (`?src=m1`, `m2`…) pour savoir quel mail a fonctionné.",
@@ -37,7 +38,7 @@ MAILS = [
         body=[
             "Bonjour {{Prénom}},",
             "En 2025, {{Entreprise}} a soutenu le Pab Fest à hauteur de {{Montant2025}} €. Merci encore, sincèrement. Avant de vous parler de 2027, nous voulions vous montrer ce que ce soutien a produit.",
-            "**Votre visibilité en 2025** (bilan joint) :",
+            "**Votre visibilité en 2025** :",
             "- votre nom et votre logo sur [supports : affiche, panneau des partenaires, site] ;",
             "- [nombre] publications Instagram qui vous citent, vues [nombre] fois ;",
             "- [nombre] festivaliers accueillis sur l'île de Batz, en entrée libre.",
@@ -86,7 +87,6 @@ MAILS = [
             "👉 {{Lien}}?src=m2",
             "Merci d'avance, et à très vite,",
             "\n".join(SIGN),
-            STOP,
         ],
         variants=[
             ("J. Pacot Isolation (refus en 2025)",
@@ -118,7 +118,6 @@ MAILS = [
             "Le paiement est sécurisé par HelloAsso. Je reste joignable au {{Téléphone}} pour en parler de vive voix.",
             "À très vite sur l'île,",
             "{{Signataire}}\nPab Fest · association Mignoned ar Pab",
-            "*Vous recevez ce message car {{Entreprise}} est une entreprise du territoire. Pour ne plus recevoir nos messages, répondez « STOP ».*",
         ],
         variants=[],
         todo=[
@@ -146,7 +145,6 @@ MAILS = [
             "Le paiement prend deux minutes, et le reçu fiscal vous parvient automatiquement par email.",
             "Belles fêtes de fin d'année à toute l'équipe de {{Entreprise}},",
             "{{Signataire}}\n{{Téléphone}}",
-            STOP,
         ],
         variants=[
             ("Contributeurs 2025 (mail 1)",
@@ -176,7 +174,6 @@ MAILS = [
             "Une question ? Répondez simplement à ce mail, je vous réponds dans la journée.",
             "Bonne rentrée,",
             "{{Signataire}}\n{{Téléphone}}",
-            STOP,
         ],
         variants=[
             ("Contributeurs 2025 (mail 1)",
@@ -187,32 +184,23 @@ MAILS = [
         ],
     ),
     dict(
-        n="6", name="Dernier appel de février",
-        meta=[("Pour qui", "Tous ceux qui n'ont toujours ni donné, ni répondu, ni écrit STOP"),
-              ("Quand", "2 ou 3 février. C'est le dernier mail de la campagne."),
-              ("Signé par", "Même signataire"),
-              ("Lien", "{{Lien}}?src=m6"),
-              ("Pièce jointe", "Une photo du festival dans le corps du mail (pas en pièce jointe)")],
-        subject="Dernier message de notre part, {{Prénom}}",
-        subject_b="Pab Fest 2027 : nous bouclons la liste des partenaires le [date]",
+        n="6", name="Relance de février",
+        meta=[("Pour qui", "Tous ceux qui n'ont pas encore donné"),
+              ("Quand", "2 ou 3 février")],
+        subject="{{Prénom}}, les premiers partenaires du Pab Fest 2027 sont là",
+        subject_b="",
         body=[
             "Bonjour {{Prénom}},",
-            "C'est mon dernier message à ce sujet, promis.",
-            "Nous bouclons la liste des partenaires du Pab Fest 2027 le **[date limite, par exemple 28 février]** : c'est la date à laquelle nous imprimons les affiches et le panneau des soutiens.",
+            "Le Pab Fest 2027 prend forme : [première annonce de la programmation ou des brasseries invitées].",
             "Ils nous ont déjà rejoints : **[3 à 5 noms de partenaires 2027 confirmés]**.",
             "[Photo de l'édition 2025]",
-            "Si {{Entreprise}} souhaite y figurer, il est encore temps : dès 300 €, votre logo est sur les supports, pour un coût réel de 120 € après réduction d'impôt.",
+            "Nous serions heureux d'y ajouter {{Entreprise}}. Dès 300 €, votre nom et votre logo figurent sur nos supports, pour un coût réel de 120 € après réduction d'impôt. Pour apparaître sur les affiches, il faut nous rejoindre avant le **[date d'impression]**.",
             "👉 {{Lien}}?src=m6",
-            "Et si ce n'est pas le bon moment, aucun souci : venez simplement trinquer avec nous sur l'île en juin !",
-            "Merci et à bientôt,",
+            "Je reste joignable au {{Téléphone}} si vous voulez en parler.",
+            "Belle journée,",
             "{{Signataire}}\n{{Téléphone}}",
-            "*Vous ne recevrez plus de relance pour cette campagne.*",
         ],
-        variants=[],
-        todo=[
-            "Fixer la **date limite** avec l'équipe communication (date d'impression).",
-            "Demander aux partenaires confirmés l'accord pour citer leur nom.",
-        ],
+        variants=[], todo=[],
     ),
 ]
 
@@ -254,64 +242,24 @@ DECISIONS = [
 MERGE = "{{Prénom}} {{Entreprise}} {{Montant2025}} {{PalierSuggéré}} {{MontantPalier}} {{CoûtRéel}} {{ContrepartiesEnPlus}} {{JourAppel}} {{Lien}} {{Signataire}} {{Téléphone}}"
 
 
-# ─── Markdown ──────────────────────────────────────────────────────────────
-def md():
-    o = [f"# {TITLE}", "",
-         "Version T1 du 21/11/2026, à valider par l'équipe. Remplace, pour les envois, les mails P, F et R de `PARCOURS-MAILS.md`.",
-         "Pour valider : relire chaque fiche, puis remplir la case « Validation » en bas de la fiche, ou commenter directement dans le Google Doc.", "",
-         "## En un coup d'œil", "",
-         "| N° | Mail | Pour qui | Envoi | Objectif |", "|---|---|---|---|---|"]
-    o += [f"| **{a}** | **{b}** | {c} | {d} | {e} |" for a, b, c, d, e in RECAP]
-    o += ["", "## Règles communes à tous les mails", ""]
-    o += [f"{i}. {r}" for i, r in enumerate(RULES, 1)]
-    for m in MAILS:
-        o += ["", "---", "", f"## Mail {m['n']} · {m['name']}", "", "| | |", "|---|---|"]
-        o += [f"| **{k}** | {v} |" for k, v in m["meta"]]
-        o += ["", f"**Objet** : {m['subject']}", f"**Objet B** (variante à tester) : {m['subject_b']}", ""]
-        for p in m["body"]:
-            for line in p.split("\n"):
-                o.append(f"> {line}")
-            o.append(">")
-        o.pop()
-        if m["variants"]:
-            o += ["", "**Variantes**", ""]
-            o += [f"- **{t}** : {d}" for t, d in m["variants"]]
-        o += ["", "**À compléter avant l'envoi**", ""]
-        o += [f"- [ ] {t}" for t in m["todo"]]
-        o += ["", "**Validation** : ☐ Validé  ☐ À modifier · par : ______ · le : ______ · remarques : ______"]
-    o += ["", "---", "", "## Annexe A · La grille des paliers", "",
-          "| Palier | Montant | Contreparties | Coût réel entreprise* |", "|---|---|---|---|"]
-    o += [f"| **{a}** | {b} | {c} | {d} |" for a, b, c, d in GRID]
-    o += ["", "\\* Réduction d'impôt de 60 % pour une entreprise, dans les limites légales : à valider par le trésorier. Les contreparties restent sous 25 % du don."]
-    o += ["", "## Annexe B · Les 15 contributeurs 2025 (mail 1)", "",
-          "| Entreprise | 2025 | Proposition 2027 | Version du mail 1 |", "|---|---|---|---|"]
-    o += [f"| {a} | {b} | {c} | {d} |" for a, b, c, d in CONTRIB]
-    o += ["", "## Annexe C · Les décisions à prendre par l'équipe", ""]
-    o += [f"{i}. {d}" for i, d in enumerate(DECISIONS, 1)]
-    o += ["", "## Annexe D · Champs de fusion", "", "Colonnes du fichier de suivi à remplir avant l'envoi :", "", " ".join(f"`{x}`" for x in MERGE.split())]
-    return "\n".join(o) + "\n"
-
-
-# ─── HTML pour Google Docs ────────────────────────────────────────────────
-BRAND = "#1d4e89"; SOFT = "#e8f0fa"; MAIL_BG = "#f7f7f5"; WARN = "#fff4e0"
+BRAND = "#1d4e89"; MAIL_BG = "#f7f7f5"
 
 
 def inline(s):
     s = html.escape(s, quote=False)
     s = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", s)
     s = re.sub(r"(?<!\*)\*(?!\*)(.+?)\*", r"<i>\1</i>", s)
-    s = re.sub(r"`(.+?)`", r"\1", s)
     return s
 
 
-def table(rows, head=None, widths=None, head_bg=BRAND):
-    t = ['<table style="border-collapse:collapse;width:100%">']
-    if head:
-        t.append("<tr>" + "".join(f'<td style="background:{head_bg};color:#fff;font-weight:bold;padding:6px;border:1px solid #c9d2dd">{inline(h)}</td>' for h in head) + "</tr>")
+def table(rows, head):
+    td = 'padding:6px;border:1px solid #c9d2dd;vertical-align:top'
+    t = ['<table style="border-collapse:collapse;width:100%"><tr>']
+    t += [f'<td style="{td};background:{BRAND};color:#fff;font-weight:bold">{inline(h)}</td>' for h in head]
+    t.append("</tr>")
     for r in rows:
-        t.append("<tr>" + "".join(f'<td style="padding:6px;border:1px solid #c9d2dd;vertical-align:top">{inline(c)}</td>' for c in r) + "</tr>")
-    t.append("</table>")
-    return "".join(t)
+        t.append("<tr>" + "".join(f'<td style="{td}">{inline(c)}</td>' for c in r) + "</tr>")
+    return "".join(t) + "</table>"
 
 
 def body_html(paras):
@@ -328,32 +276,32 @@ def body_html(paras):
     return "".join(out)
 
 
+# ─── Rendu simple ───────────────────────────────────────────────────────
+def md():
+    o = [f"# {TITLE}", "", "Version du 21/11/2026, à valider par l'équipe.", "",
+         "| N° | Mail | Pour qui | Contacts | Envoi |", "|---|---|---|---|---|"]
+    o += [f"| {a} | **{b}** | {c} | **{d}** | {e} |" for a, b, c, d, e in RECAP]
+    o.append("| | **Total** | | **213 entreprises** | |")
+    for m, r in zip(MAILS, RECAP):
+        o += ["", "---", "", f"## Mail {r[0]} · {r[1]}", "",
+              f"**Pour qui** : {r[2]}  \n**Nombre de contacts** : {r[3]}  ", f"**Quand** : {r[4]}  ", f"**Objet** : {m['subject']}", ""]
+        for p in m["body"]:
+            o += [f"> {l}" for l in p.split("\n")] + [">"]
+        o.pop()
+    return "\n".join(o) + "\n"
+
+
 def page():
     h = [f"<html><head><meta charset='utf-8'><title>{html.escape(TITLE)}</title></head><body style='font-family:Arial;font-size:11pt'>"]
     h.append(f"<h1 style='color:{BRAND}'>{inline(TITLE)}</h1>")
-    h.append("<p><b>Version T1 du 21/11/2026, à valider par l'équipe.</b> Pour valider : relisez chaque fiche, puis remplissez la case « Validation » en bas de la fiche, ou ajoutez un commentaire directement dans ce document.</p>")
-    h.append(f"<h2 style='color:{BRAND}'>En un coup d'œil</h2>")
-    h.append(table([[f"**{a}**", f"**{b}**", c, d, e] for a, b, c, d, e in RECAP], ["N°", "Mail", "Pour qui", "Envoi", "Objectif"]))
-    h.append(f"<h2 style='color:{BRAND}'>Règles communes à tous les mails</h2><ol>" + "".join(f"<li>{inline(r)}</li>" for r in RULES) + "</ol>")
-    for m in MAILS:
+    h.append("<p>Version du 21/11/2026, à valider par l'équipe. Vos remarques : directement en commentaire dans ce document.</p>")
+    h.append(table([[a, f"**{b}**", c, f"**{d}**", e] for a, b, c, d, e in RECAP] + [["", "**Total**", "", "**213 entreprises**", ""]],
+                   ["N°", "Mail", "Pour qui", "Contacts", "Envoi"]))
+    for m, r in zip(MAILS, RECAP):
         h.append('<p style="page-break-before:always"></p>')
-        h.append(f"<h2 style='color:{BRAND}'>Mail {m['n']} · {inline(m['name'])}</h2>")
-        h.append(table([[f"**{k}**", v] for k, v in m["meta"]]))
-        h.append(f"<p><b>Objet :</b> {inline(m['subject'])}<br><b>Objet B (variante à tester) :</b> {inline(m['subject_b'])}</p>")
+        h.append(f"<h2 style='color:{BRAND}'>Mail {r[0]} · {inline(r[1])}</h2>")
+        h.append(f"<p><b>Pour qui :</b> {inline(r[2])}<br><b>Nombre de contacts :</b> {r[3]}<br><b>Quand :</b> {inline(r[4])}<br><b>Objet :</b> {inline(m['subject'])}</p>")
         h.append(f'<table style="border-collapse:collapse;width:100%"><tr><td style="background:{MAIL_BG};border:1px solid #c9d2dd;border-left:4px solid {BRAND};padding:12px">{body_html(m["body"])}</td></tr></table>')
-        if m["variants"]:
-            h.append("<h3>Variantes</h3>")
-            h.append(table([[f"**{t}**", d] for t, d in m["variants"]], ["Pour qui", "Ce qui change"]))
-        h.append("<h3>À compléter avant l'envoi</h3><ul>" + "".join(f"<li>☐ {inline(t)}</li>" for t in m["todo"]) + "</ul>")
-        h.append(f'<table style="border-collapse:collapse;width:100%"><tr><td style="background:{WARN};border:1px solid #e0b04a;padding:8px"><b>Validation</b> : ☐ Validé&nbsp;&nbsp;☐ À modifier&nbsp;&nbsp;·&nbsp;&nbsp;par : ____________&nbsp;&nbsp;·&nbsp;&nbsp;le : ________<br>Remarques :</td></tr></table>')
-    h.append('<p style="page-break-before:always"></p>')
-    h.append(f"<h2 style='color:{BRAND}'>Annexe A · La grille des paliers</h2>")
-    h.append(table([[f"**{a}**", b, c, d] for a, b, c, d in GRID], ["Palier", "Montant", "Contreparties", "Coût réel entreprise*"]))
-    h.append("<p><i>* Réduction d'impôt de 60 % pour une entreprise, dans les limites légales : à valider par le trésorier. Les contreparties restent sous 25 % du don.</i></p>")
-    h.append(f"<h2 style='color:{BRAND}'>Annexe B · Les 15 contributeurs 2025 (mail 1)</h2>")
-    h.append(table([list(r) for r in CONTRIB], ["Entreprise", "2025", "Proposition 2027", "Version du mail 1"]))
-    h.append(f"<h2 style='color:{BRAND}'>Annexe C · Les décisions à prendre par l'équipe</h2><ol>" + "".join(f"<li>{inline(d)}</li>" for d in DECISIONS) + "</ol>")
-    h.append(f"<h2 style='color:{BRAND}'>Annexe D · Champs de fusion</h2><p>Colonnes du fichier de suivi à remplir avant l'envoi :</p><p>{html.escape(MERGE)}</p>")
     h.append("</body></html>")
     return "".join(h)
 
