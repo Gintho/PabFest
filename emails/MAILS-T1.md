@@ -1,6 +1,6 @@
 # Pab Fest 2027 · Les mails de lancement de la campagne mécénat
 
-Version du 21/11/2026, à valider par l'équipe.
+Version du 21/11/2026, à valider par l'équipe. Les textes reprennent le ton et les formulations des mails envoyés en 2025.
 
 | N° | Mail | Pour qui | Contacts | Envoi |
 |---|---|---|---|---|
@@ -19,39 +19,32 @@ Version du 21/11/2026, à valider par l'équipe.
 **Pour qui** : Entreprises qui ont soutenu le Pab Fest en 2025 (en argent, en nature ou par une promesse)  
 **Nombre de contacts** : 15  
 **Quand** : Semaine du 23 novembre  
-**Objet** : {{Prénom}}, voici ce que {{Entreprise}} a rendu possible au Pab Fest 2025
+**Objet** : Merci pour 2025 : rejoignez-nous à nouveau pour le PAB FEST 2027
 
 > Bonjour {{Prénom}},
 >
-> En 2025, {{Entreprise}} a soutenu le Pab Fest à hauteur de {{Montant2025}} €. Merci encore, sincèrement. Avant de vous parler de 2027, nous voulions vous montrer ce que ce soutien a produit.
+> En 2025, {{Entreprise}} a fait partie des partenaires qui ont rendu possible la 2e édition du PAB FEST sur l'Île de Batz. Au nom de toute l'association Mignoned Ar Pab, merci encore pour votre confiance.
 >
-> **Votre visibilité en 2025** :
+> Grâce à vous, [nombre] festivaliers ont profité de trois jours de musique, de bière artisanale et de culture bretonne, en entrée libre, et votre logo a été vu sur [affiches, flyers, réseaux sociaux, panneau des partenaires].
 >
-> - votre nom et votre logo sur [supports : affiche, panneau des partenaires, site] ;
+> Nous préparons aujourd'hui l'édition 2027, qui se tiendra du [dates] juin 2027, et nous tenions à vous en parler **avant d'ouvrir notre campagne de partenariat**. Vous êtes un acteur clé de notre réseau local, et nous serions honorés de vous compter à nouveau parmi nos partenaires.
 >
-> - [nombre] publications Instagram qui vous citent, vues [nombre] fois ;
+> Pour 2027, nous vous proposons la formule **{{PalierSuggéré}}** ({{MontantPalier}} €), qui renforce votre visibilité. Grâce à la réduction d'impôt de 60 %, elle vous revient réellement à **{{CoûtRéel}} €**. Et un don versé avant le 31 décembre compte sur votre exercice 2026.
 >
-> - [nombre] festivaliers accueillis sur l'île de Batz, en entrée libre.
+> Vous pouvez renouveler votre soutien en deux minutes ici : {{Lien}}?src=m1
 >
-> Pour 2027, nous ouvrons le renouvellement à nos partenaires **avant tout le monde**, et nous vous proposons le palier **{{PalierSuggéré}}** ({{MontantPalier}} €). Il ajoute à votre visibilité : {{ContrepartiesEnPlus}}. Après la réduction d'impôt de 60 %, il vous coûte réellement **{{CoûtRéel}} €**. Renouveler au même niveau reste bien sûr possible.
+> Je vous propose de vous appeler dans les prochains jours pour en parler. N'hésitez pas non plus à me joindre directement au 07 67 67 83 24.
 >
-> Deux bonnes raisons de décider avant le 31 décembre :
+> Avec tous nos remerciements pour votre fidélité,
 >
-> - votre don compte sur votre **exercice 2026** ;
+> Cordialement,
 >
-> - vous choisissez **en premier** votre visibilité, avec la mention « Partenaire fidèle depuis 2025 ».
->
-> 👉 **Renouveler mon soutien en 2 minutes :** {{Lien}}?src=m1
->
-> Comme en 2025, votre reçu fiscal arrive automatiquement par email.
->
-> Je vous appelle {{JourAppel}} pour en parler de vive voix, ou répondez simplement à ce mail.
->
-> Avec toute notre reconnaissance,
->
-> {{Signataire}}
-> Président(e) du Pab Fest · association Mignoned ar Pab
-> {{Téléphone}}
+> Raphael PETIT
+> Secrétaire général
+> Association Mignoned Ar Pab
+> 07 67 67 83 24
+> mignonedarpab@gmail.com
+> https://www.instagram.com/pab_fest/
 
 ---
 
@@ -60,31 +53,36 @@ Version du 21/11/2026, à valider par l'équipe.
 **Pour qui** : Entreprises recommandées par Eric Grall, jamais donatrices  
 **Nombre de contacts** : 13  
 **Quand** : Fin novembre  
-**Objet** : {{Prénom}}, Eric Grall m'a conseillé de vous écrire
+**Objet** : De la part d'Eric Grall : devenez partenaire du PAB FEST 2027
 
 > Bonjour {{Prénom}},
 >
-> Eric Grall m'a parlé de vous et de {{Entreprise}} : il m'a dit que vous étiez attaché à ce qui fait vivre notre territoire. Je me permets donc de vous écrire directement.
+> Eric Grall m'a conseillé de prendre contact avec vous : il m'a dit combien {{Entreprise}} était attachée à la vie de notre territoire.
 >
-> Je m'occupe des partenaires du **Pab Fest**, le festival de bières artisanales et de musiques du monde de l'île de Batz. Chaque mois de juin, il fait travailler les commerces de l'île, les hébergeurs et la traversée depuis Roscoff, et il reste en entrée libre.
+> Je me permets donc de vous présenter le **PAB FEST**, le festival organisé par l'association Mignoned Ar Pab, qui se tiendra du [dates] juin 2027 sur l'Île de Batz. Cet événement célèbre la culture bretonne à travers la musique, la bière artisanale et l'art sous toutes ses formes, et il fait vivre toute l'île : commerces, hébergeurs, traversée depuis Roscoff.
 >
-> Pour 2027, nous cherchons quelques entreprises du Léon et du pays de Morlaix prêtes à nous accompagner :
+> En tant qu'entrepreneur local et acteur important de notre réseau, nous serions heureux de vous compter parmi nos partenaires. Vous pourriez bénéficier :
 >
-> - **Votre soutien est déductible** : nous sommes reconnus d'intérêt général par rescrit fiscal, et votre reçu fiscal arrive automatiquement. Un soutien de 500 € vous coûte réellement 200 €.
+> - de la présence de votre logo sur nos supports de communication (affiches, flyers, site web, réseaux sociaux) ;
 >
-> - **Vous êtes visible** : dès 300 €, le nom et le logo de {{Entreprise}} figurent sur nos supports. Dès 2 000 €, nous construisons avec vous une campagne sur mesure.
+> - d'une visibilité sur place, grâce au panneau des partenaires et à des espaces dédiés ;
 >
-> - **Un don versé avant le 31 décembre compte sur votre exercice 2026.**
+> - de l'association de votre entreprise à un événement convivial, symbole de dynamisme et de savoir-faire local.
 >
-> Je vous appelle {{JourAppel}} pour en parler cinq minutes. Si vous préférez, tout est ici :
+> Les dons sont déductibles fiscalement : en tant qu'entreprise, vous bénéficiez d'une réduction d'impôt égale à 60 % du montant de votre don, dans la limite de 20 000 € ou de 0,5 % de votre chiffre d'affaires annuel hors taxes (le montant le plus élevé étant retenu). Le reçu fiscal vous est envoyé automatiquement.
 >
-> 👉 {{Lien}}?src=m2
+> Vous trouverez en pièce jointe notre dossier de partenariat, qui détaille les différentes formules. Je vous appellerai dans les prochains jours pour en discuter ; vous pouvez aussi me joindre au 07 67 67 83 24.
 >
-> Merci d'avance, et à très vite,
+> Avec tous nos remerciements pour votre considération,
 >
-> {{Signataire}}
-> Pab Fest · association Mignoned ar Pab
-> {{Téléphone}}
+> Cordialement,
+>
+> Raphael PETIT
+> Secrétaire général
+> Association Mignoned Ar Pab
+> 07 67 67 83 24
+> mignonedarpab@gmail.com
+> https://www.instagram.com/pab_fest/
 
 ---
 
@@ -93,28 +91,46 @@ Version du 21/11/2026, à valider par l'équipe.
 **Pour qui** : Les autres entreprises de la base (hors refus 2025)  
 **Nombre de contacts** : 185  
 **Quand** : 1er au 3 décembre  
-**Objet** : {{Prénom}}, le Pab Fest a besoin de {{Entreprise}} pour faire vivre l'île de Batz
+**Objet** : Devenez partenaire du PAB FEST 2027 sur l'Île de Batz
 
-> Bonjour {{Prénom}},
+> Madame, Monsieur,
 >
-> Chaque mois de juin, le **Pab Fest** réunit sur l'île de Batz les brasseries artisanales bretonnes et des groupes de musiques du monde. L'entrée est libre, et tout le week-end fait travailler l'île : commerces, hébergeurs, traversée depuis Roscoff.
+> Nous avons le plaisir de vous présenter le **PAB FEST**, un festival unique organisé par l'association Mignoned Ar Pab, qui se tiendra du [dates] juin 2027 sur l'Île de Batz. Cet événement, véritable célébration de la culture bretonne, met à l'honneur la musique, la bière artisanale et l'art sous toutes ses formes, dans un cadre exceptionnel et en entrée libre.
 >
-> Pour l'édition 2027, nous cherchons des entreprises du territoire prêtes à nous soutenir. Trois raisons de le faire :
+> Devenir partenaire du PAB FEST vous permettra de :
 >
-> **1. Votre soutien est déductible.** Le Pab Fest est une association reconnue d'intérêt général par rescrit fiscal. Chaque don ouvre droit à un **reçu fiscal envoyé automatiquement**. Pour une entreprise, la réduction d'impôt est de 60 % : 500 € vous coûtent réellement 200 €. Et un don versé avant le 31 décembre compte sur votre exercice 2026.
+> - associer votre image à un événement convivial et inclusif, symbole de dynamisme et de savoir-faire local ;
 >
-> **2. Vous êtes visible.** Dès 300 €, votre nom et votre logo figurent sur nos supports. Selon le palier : panneau des soutiens sur le festival, Instagram, invitation à la soirée d'ouverture, logo sur les t-shirts des bénévoles, jusqu'à une campagne sur mesure.
+> - bénéficier d'une forte visibilité sur nos supports de communication et pendant le festival ;
 >
-> **3. Vous faites vivre l'île.** Votre soutien reste ici : il rémunère les artistes, accueille les brasseurs bretons et garde le festival ouvert à tous.
+> - contribuer au rayonnement de la culture bretonne et à la vie de l'île ;
 >
-> 👉 **Soutenir le Pab Fest en 2 minutes :** {{Lien}}?src=m3
+> - profiter des avantages fiscaux du mécénat : une réduction d'impôt de 60 % du montant de votre don, dans la limite de 20 000 € ou de 0,5 % de votre chiffre d'affaires hors taxes.
 >
-> Le paiement est sécurisé par HelloAsso. Je reste joignable au {{Téléphone}} pour en parler de vive voix.
+> Nos formules de partenariat :
 >
-> À très vite sur l'île,
+> - **La Pinte (300 €)** : votre logo sur nos supports de communication (affiches, flyers, site web, réseaux sociaux) ;
 >
-> {{Signataire}}
-> Pab Fest · association Mignoned ar Pab
+> - **La Tournée (500 €)** : en plus, le panneau des partenaires sur le festival, une publication Instagram et une invitation à la soirée d'ouverture ;
+>
+> - **Le Fût (1 000 €)** : en plus, une publication dédiée et votre logo sur les t-shirts des bénévoles ;
+>
+> - **Le Brasseur (dès 2 000 €)** : une présence sur mesure, jusqu'à une scène à vos couleurs.
+>
+> Vous trouverez en pièce jointe notre dossier de partenariat. Pour nous soutenir directement : {{Lien}}?src=m3
+>
+> Nous restons à votre disposition pour échanger sur une formule adaptée à vos besoins, au 07 67 67 83 24.
+>
+> Nous espérons vivement que vous partagerez notre enthousiasme pour ce projet et que vous accepterez de nous accompagner dans cette belle aventure.
+>
+> Cordialement,
+>
+> Raphael PETIT
+> Secrétaire général
+> Association Mignoned Ar Pab
+> 07 67 67 83 24
+> mignonedarpab@gmail.com
+> https://www.instagram.com/pab_fest/
 
 ---
 
@@ -123,28 +139,28 @@ Version du 21/11/2026, à valider par l'équipe.
 **Pour qui** : Tous ceux qui n'ont pas encore donné  
 **Nombre de contacts** : jusqu'à 213  
 **Quand** : 14 ou 15 décembre  
-**Objet** : Avant le 31 décembre : votre soutien au Pab Fest compte sur 2026
+**Objet** : Avant le 31 décembre : votre soutien au PAB FEST compte sur 2026
 
-> Bonjour {{Prénom}},
+> Bonjour,
 >
-> Un mot rapide avant la fin de l'année : **un don versé avant le 31 décembre est déductible de votre exercice 2026** (pour les entreprises qui clôturent au 31/12).
+> J'espère que vous allez bien. Je reviens vers vous au sujet de notre proposition de partenariat pour le PAB FEST 2027, qui se tiendra du [dates] juin 2027 sur l'Île de Batz.
 >
-> Concrètement, avec la réduction d'impôt de 60 % :
+> Un point qui peut vous intéresser avant la fin de l'année : **un don versé avant le 31 décembre est déductible sur votre exercice 2026**. Avec la réduction d'impôt de 60 %, une formule à 300 € vous revient réellement à 120 €, et une formule à 500 € à 200 €.
 >
-> - **La Pinte, 300 €** : votre nom et votre logo sur nos supports, pour un coût réel de **120 €** ;
+> Pour nous soutenir en deux minutes : {{Lien}}?src=m4
 >
-> - **La Tournée, 500 €** : en plus, le panneau des soutiens, Instagram et une invitation à la soirée d'ouverture, pour **200 €** ;
+> N'hésitez pas à me contacter directement au 07 67 67 83 24 pour échanger ou pour confirmer votre engagement.
 >
-> - **Le Fût, 1 000 €** : en plus, un post dédié et votre logo sur les t-shirts des bénévoles, pour **400 €**.
+> Je vous souhaite de belles fêtes de fin d'année.
 >
-> 👉 {{Lien}}?src=m4
+> Cordialement,
 >
-> Le paiement prend deux minutes, et le reçu fiscal vous parvient automatiquement par email.
->
-> Belles fêtes de fin d'année à toute l'équipe de {{Entreprise}},
->
-> {{Signataire}}
-> {{Téléphone}}
+> Raphael PETIT
+> Secrétaire général
+> Association Mignoned Ar Pab
+> 07 67 67 83 24
+> mignonedarpab@gmail.com
+> https://www.instagram.com/pab_fest/
 
 ---
 
@@ -153,28 +169,30 @@ Version du 21/11/2026, à valider par l'équipe.
 **Pour qui** : Tous ceux qui n'ont pas encore donné  
 **Nombre de contacts** : jusqu'à 213  
 **Quand** : 6 ou 7 janvier  
-**Objet** : Bonne année ! Le Pab Fest 2027 compte sur {{Entreprise}}
+**Objet** : Bonne année ! Rejoignez-nous pour le PAB FEST 2027
 
-> Bonjour {{Prénom}},
+> Bonjour,
 >
-> Toute l'équipe du Pab Fest vous souhaite une belle année 2027 !
+> Toute l'équipe de Mignoned Ar Pab vous souhaite une très belle année 2027 !
 >
-> Je reviens vers vous au sujet de notre prochaine édition, du [dates 2027] sur l'île de Batz. En deux mots :
+> Je reviens vers vous au sujet de notre proposition de partenariat pour le PAB FEST 2027, qui se tiendra du [dates] juin 2027 sur l'Île de Batz. Nous serions honorés de vous compter parmi nos partenaires.
 >
-> - un soutien dès 50 €, avec un **reçu fiscal automatique** (nous sommes reconnus d'intérêt général) ;
+> Vous êtes un acteur de notre réseau local, et votre soutien contribuerait directement au succès de cette nouvelle édition. Je vous rappelle également que les dons sont déductibles fiscalement, ce qui constitue un avantage supplémentaire ;)
 >
-> - **dès 300 €**, le nom et le logo de {{Entreprise}} sur le festival, pour un coût réel de 120 € ;
+> Pour nous soutenir : {{Lien}}?src=m5
 >
-> - [déjà [nombre] entreprises du territoire à nos côtés pour 2027].
+> Nous serions ravis de discuter des différentes formules et de répondre à vos questions. N'hésitez pas à me contacter directement au 07 67 67 83 24.
 >
-> 👉 {{Lien}}?src=m5
+> Merci d'avance pour votre soutien et votre retour.
 >
-> Une question ? Répondez simplement à ce mail, je vous réponds dans la journée.
+> Cordialement,
 >
-> Bonne rentrée,
->
-> {{Signataire}}
-> {{Téléphone}}
+> Raphael PETIT
+> Secrétaire général
+> Association Mignoned Ar Pab
+> 07 67 67 83 24
+> mignonedarpab@gmail.com
+> https://www.instagram.com/pab_fest/
 
 ---
 
@@ -183,23 +201,27 @@ Version du 21/11/2026, à valider par l'équipe.
 **Pour qui** : Tous ceux qui n'ont pas encore donné  
 **Nombre de contacts** : jusqu'à 213  
 **Quand** : 2 ou 3 février  
-**Objet** : {{Prénom}}, les premiers partenaires du Pab Fest 2027 sont là
+**Objet** : Rejoignez nos premiers partenaires du PAB FEST 2027
 
-> Bonjour {{Prénom}},
+> Bonjour,
 >
-> Le Pab Fest 2027 prend forme : [première annonce de la programmation ou des brasseries invitées].
+> J'espère que vous allez bien depuis notre dernier échange.
 >
-> Ils nous ont déjà rejoints : **[3 à 5 noms de partenaires 2027 confirmés]**.
+> Le PAB FEST 2027 prend forme : [première annonce de la programmation ou des brasseries invitées]. Plusieurs entreprises du territoire nous ont déjà rejoints, dont [3 à 5 noms de partenaires confirmés].
 >
-> [Photo de l'édition 2025]
+> Nous serions heureux d'y ajouter votre entreprise. Pour figurer sur nos affiches et nos flyers, il suffit de nous rejoindre avant le **[date d'impression]**. Les dons restent déductibles fiscalement à 60 %.
 >
-> Nous serions heureux d'y ajouter {{Entreprise}}. Dès 300 €, votre nom et votre logo figurent sur nos supports, pour un coût réel de 120 € après réduction d'impôt. Pour apparaître sur les affiches, il faut nous rejoindre avant le **[date d'impression]**.
+> Pour nous soutenir : {{Lien}}?src=m6
 >
-> 👉 {{Lien}}?src=m6
+> N'hésitez pas à me contacter directement au 07 67 67 83 24 pour échanger sur ce projet ou pour confirmer votre engagement.
 >
-> Je reste joignable au {{Téléphone}} si vous voulez en parler.
+> Merci d'avance pour votre soutien et votre retour.
 >
-> Belle journée,
+> Cordialement,
 >
-> {{Signataire}}
-> {{Téléphone}}
+> Raphael PETIT
+> Secrétaire général
+> Association Mignoned Ar Pab
+> 07 67 67 83 24
+> mignonedarpab@gmail.com
+> https://www.instagram.com/pab_fest/
