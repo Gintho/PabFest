@@ -46,28 +46,6 @@ Deux mails ci-dessous :
 > {{Signataire}}
 > Pab Fest — association Mignoned ar Pab
 
----|---|---|
-> | **Péran Constructions** (Bodilis) | accueil@peran-brest.com · 02 98 19 20 01 | Prénom de M. Péran, email direct |
-> | **Batibois Pen ar Bed** (Plouénan) | 02 98 69 58 20 | Nom du dirigeant, email |
-> | **Raub** (Guilers) | 02 98 07 44 81 | Prénom et email de M. Salaün |
-> | **Colas – agence de Morlaix** | 02 98 88 39 52 | Nom et email de ton contact à l'agence |
-> | **Suez – agence de Saint-Pol** | standard national uniquement | Email et portable de David Le Scanf |
-> | **La Chikolodenn** (Carantec) | contact.chikolodenn@gmail.com · 02 98 72 22 67 | Nom de ton contact |
-> | **Réseau Krill** (Guipavas) | standard 02 98 30 34 17 | Prénom et email de Mme Lozach |
-> | **Cozigou** (Ploudaniel) | standard 02 98 93 75 55 | Email de M. Rouvrais (Christian ?) |
-> | **Korn Peinture** (Morlaix) | contact@kornpeinture.com · 02 98 88 07 43 | Nom et email de ton contact |
-> | **Le Lez – entreprise générale** (Plouzévédé) | 06 67 28 93 92 (Thierry Le Lez) | Est-ce bien Thierry ? Son email |
-> | **Julien Le Lez – couverture** (Plouvorn) | 06 50 13 83 81 | Son email |
->
-> Et une question importante : **es-tu d'accord pour que nous citions ton nom** dans notre premier message (« Eric Grall m'a conseillé de vous écrire ») ? Ça change tout pour un premier contact.
->
-> Si c'est plus simple, tu peux aussi juste répondre à ce mail en complétant le tableau, ou m'appeler au {{Téléphone}}.
->
-> Un grand merci, et à très vite sur l'île,
->
-> {{Signataire}}
-> Pab Fest — association Mignoned ar Pab
-
 ---
 
 ## Mail 2 — Aux adresses génériques des entreprises (plan B)

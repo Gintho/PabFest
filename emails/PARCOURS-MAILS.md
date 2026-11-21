@@ -1,6 +1,6 @@
 # Pab Fest 2027 — Les mails des deux parcours
 
-Version du 21/11/2026, rédigée à partir du deck « Pab Fest – Parcours Mécénat & Partenariats » (18 slides).
+Version du 21/11/2026 (mise à jour : mails de renouvellement des contributeurs 2025 et demande de contacts), rédigée à partir du deck « Pab Fest – Parcours Mécénat & Partenariats » (18 slides).
 Remplace `TEMPLATES.md` pour les envois de la campagne 2027.
 
 ---
@@ -397,7 +397,176 @@ Avantage fidèle, à valider : mention « Soutien fidèle depuis 2025 » sur le 
 
 ---
 
-## 4. Script d'appel (fidèles et contacts Eric Grall)
+## 4. Mails dédiés aux contributeurs 2025 (renouvellement)
+
+Ces mails remplacent F1 et F2 pour les entreprises qui ont contribué en 2025. Ils suivent la règle d'or du sponsoring : **on prouve d'abord ce que le soutien a rapporté, puis on propose une suite personnalisée**. Un partenaire renouvelle quand il a vu le résultat de son engagement, pas quand on lui redemande de l'argent.
+
+### Les principes appliqués
+
+1. **La preuve avant la demande** : le bilan de visibilité 2025 (supports, publications, fréquentation) est envoyé avec le mail, en PDF d'une page.
+2. **Une proposition, pas un catalogue** : chaque entreprise reçoit **un** palier conseillé, celui juste au-dessus de 2025, avec le coût réel après impôt. Renouveler au même niveau reste possible.
+3. **Le bon moment** : avant le 31 décembre, le don compte sur l'exercice 2026 et le partenaire choisit en premier son emplacement et sa visibilité.
+4. **Une seule action, puis un appel** : un lien de paiement, et un appel du référent sous 48 h.
+5. **Régulariser 2025 avant de parler de 2027** : Le Coz Couv (quitus manquant) et Maison Ty Nevez (quitus à envoyer) reçoivent leur reçu 2025 **avant** ce mail.
+
+### Qui reçoit quoi
+
+| Entreprise | 2025 | Proposition 2027 | Coût réel* | Mail |
+|---|---|---|---|---|
+| Lagadec TP | 1 000 € | Le Brasseur, dès 2 000 € | dès 800 € | R2 |
+| Constructions Paugam | 800 € | Le Fût 1 000 € ou Brasseur | 400 € | R2 |
+| Ty Coz Couverture | 710 € | Le Fût 1 000 € ou Brasseur | 400 € | R2 |
+| Empereur | 700 € | Le Fût 1 000 € ou Brasseur | 400 € | R2 |
+| Jardin Service | 500 € | Le Fût 1 000 € | 400 € | R1 |
+| LVL Agencement | 300 € | La Tournée 500 € | 200 € | R1 |
+| Le Coz Couv | 300 € | La Tournée 500 € | 200 € | R1 (après envoi du quitus) |
+| Maison Ty Nevez | 300 € | La Tournée 500 € | 200 € | R1 (après envoi du quitus, email à trouver) |
+| Studio In Situ | 200 € | La Pinte 300 € | 120 € | R1 |
+| Crédit Agricole du Finistère | 150 € | La Pinte 300 € | 120 € | R1 |
+| A L'Aise Breizh | 150 t-shirts en nature | Renouvellement en nature + La Tournée | à valoriser | R3 |
+| Eurovia | 300 € promis, non versé | La Tournée 500 € (ou 300 €) | 200 € | R4 |
+| Beach Break | 200 € promis, non versé | La Pinte 300 € | 120 € | R4 |
+| Café Ty Pierre | 200 € promis, non versé | La Pinte 300 € | 120 € | R4 |
+| JP Berton / EDF | 200 € validés, non versés | La Pinte 300 € | 120 € | R4 |
+
+\* Réduction d'impôt de 60 % pour une entreprise, dans les limites légales : à valider par le trésorier.
+
+**Quand** : dès maintenant (fin novembre), puisque la date de l'early bird est passée. Relance R5 sept jours plus tard, puis appel.
+
+---
+
+### R1 · Renouvellement des partenaires 2025
+
+**Objet** : {{Prénom}}, voici ce que {{Entreprise}} a rendu possible au Pab Fest 2025
+**Objet B** : Partenaire 2025, premier servi pour 2027
+
+> Bonjour {{Prénom}},
+>
+> En 2025, {{Entreprise}} a soutenu le Pab Fest à hauteur de {{Montant2025}} €. Avant de vous parler de 2027, nous voulions vous montrer ce que ce soutien a produit.
+>
+> **Votre visibilité en 2025** (bilan joint) :
+> - votre nom et votre logo sur [supports : site, affiche, panneau des partenaires…] ;
+> - [nombre] publications Instagram qui vous citent, vues [nombre] fois ;
+> - [nombre] festivaliers accueillis sur l'île de Batz, en entrée libre.
+>
+> **Ce que nous avons appris** : [une amélioration concrète de 2025 à 2027, par exemple plus de brasseries, une meilleure traversée].
+>
+> Pour 2027, nous ouvrons le renouvellement à nos partenaires avant tout le monde, et nous vous proposons de passer au palier **{{PalierSuggéré}}** ({{MontantPalier}} €). Il ajoute à votre visibilité : {{ContrepartiesEnPlus}}. Après la réduction d'impôt de 60 %, il vous coûte réellement **{{CoûtRéel}} €**. Si vous préférez renouveler au même niveau, c'est bien sûr possible.
+>
+> Deux raisons de décider avant le 31 décembre :
+> - votre don compte sur votre **exercice 2026** ;
+> - vous choisissez **en premier** votre visibilité, avec la mention « Partenaire fidèle depuis 2025 ».
+>
+> Renouveler en deux minutes : {{Lien}}?src=r1
+> Votre reçu fiscal vous parvient automatiquement par email, comme en 2025.
+>
+> Je vous appelle {{JourAppel}} pour en parler de vive voix, ou répondez simplement à ce mail.
+>
+> Merci pour votre confiance,
+>
+> {{Signataire}}
+> Président(e) du Pab Fest, association Mignoned ar Pab
+> {{Téléphone}}
+
+---
+
+### R2 · Grands partenaires (700 € et plus) : proposition sur mesure
+
+**Objet** : {{Prénom}}, construisons ensemble la présence de {{Entreprise}} au Pab Fest 2027
+**Objet B** : {{Entreprise}}, une scène à vos couleurs en 2027 ?
+
+> Bonjour {{Prénom}},
+>
+> Avec {{Montant2025}} € en 2025, {{Entreprise}} fait partie des partenaires qui ont le plus compté pour le Pab Fest. Merci. Vous trouverez en pièce jointe le bilan de votre visibilité 2025.
+>
+> Pour 2027, nous aimerions aller plus loin avec vous qu'un logo sur une liste. Deux options :
+>
+> - **Le Fût (1 000 €)** : votre nom et logo sur nos supports, le panneau des soutiens, un post Instagram dédié, votre logo sur les t-shirts des bénévoles, et une invitation à la soirée d'ouverture. Coût réel après impôt : **400 €**.
+> - **Le Brasseur (dès 2 000 €)** : une campagne construite pour vous. Par exemple, une scène à vos couleurs, une bâche à votre logo en fond de scène, un concert annoncé à votre nom, des gobelets à votre logo ou des photos du festival pour votre propre communication. Coût réel : **dès 800 €**.
+>
+> En tant que partenaire 2025, vous avez le premier choix sur les emplacements et les formats, et un don versé avant le 31 décembre compte sur votre exercice 2026.
+>
+> Je vous propose un rendez-vous de 20 minutes, chez vous ou par téléphone, pour en parler. Seriez-vous disponible {{CréneauProposé}} ?
+>
+> Si vous préférez renouveler directement : {{Lien}}?src=r2
+>
+> Bien cordialement,
+>
+> {{Signataire}}
+> Président(e) du Pab Fest, association Mignoned ar Pab
+> {{Téléphone}}
+
+---
+
+### R3 · Partenaire en nature (A L'Aise Breizh)
+
+**Objet** : Vos t-shirts ont habillé le Pab Fest 2025 : on remet ça en 2027 ?
+
+> Bonjour {{Prénom}},
+>
+> En 2025, les 150 t-shirts offerts par A L'Aise Breizh ont habillé nos bénévoles pendant tout le festival : sur les photos, sur Instagram et sur l'île, on ne voyait qu'eux. Merci.
+>
+> Pour 2027, nous aimerions renouveler ce partenariat. Deux possibilités :
+> - **le même soutien en nature** (t-shirts bénévoles), avec votre logo sur les t-shirts et sur nos supports ;
+> - **un soutien en nature complété d'un don**, par exemple La Tournée (500 €, soit 200 € après impôt), pour ajouter le panneau des soutiens, Instagram et une invitation à la soirée d'ouverture.
+>
+> Un don en nature peut aussi donner droit à un reçu fiscal, sur la base de sa valeur [modalités à valider avec notre trésorier].
+>
+> Pouvons-nous en parler cette semaine ? Je vous appelle {{JourAppel}}.
+>
+> Merci encore,
+>
+> {{Signataire}}
+> Pab Fest, association Mignoned ar Pab
+
+---
+
+### R4 · Engagés en 2025, paiement non finalisé
+
+Pour Eurovia, Beach Break, Café Ty Pierre et JP Berton / EDF : ils avaient dit oui en 2025, mais le paiement ne s'est pas fait. Le ton est léger, sans reproche, et met en avant la simplicité du nouveau paiement en ligne.
+
+**Objet** : {{Prénom}}, on reprend là où on s'était arrêtés ?
+
+> Bonjour {{Prénom}},
+>
+> En 2025, vous aviez donné votre accord pour soutenir le Pab Fest, et nous vous en remercions encore. Le paiement ne s'était finalement pas fait, sans doute à cause de nos démarches de l'époque.
+>
+> Pour 2027, tout est plus simple : **un formulaire en ligne, un paiement sécurisé par HelloAsso, et votre reçu fiscal arrive automatiquement par email**.
+>
+> Nous vous proposons le palier **{{PalierSuggéré}}** ({{MontantPalier}} €), soit **{{CoûtRéel}} €** après réduction d'impôt, avec {{ContrepartiesPalier}}. Et un don versé avant le 31 décembre compte sur votre exercice 2026.
+>
+> Tout se fait ici en deux minutes : {{Lien}}?src=r4
+>
+> Une question ? Répondez simplement à ce mail ou appelez-moi au {{Téléphone}}.
+>
+> À très vite sur l'île,
+>
+> {{Signataire}}
+> Pab Fest, association Mignoned ar Pab
+
+---
+
+### R5 · Relance à sept jours (R1 à R4)
+
+**Objet** : Re: {{Entreprise}} et le Pab Fest 2027
+
+> Bonjour {{Prénom}},
+>
+> Je me permets un petit rappel : le premier choix des partenaires 2025 reste ouvert jusqu'au [date limite], et un don versé avant le 31 décembre compte sur votre exercice 2026.
+>
+> {{Lien}}?src=r5
+>
+> [Prénom du référent] vous appellera dans les prochains jours si vous préférez en parler.
+>
+> Belle journée,
+> {{Signataire}}
+
+Après le paiement, envoyer F4 ou F5 (merci « membre fidèle »).
+
+
+---
+
+## 5. Script d'appel (fidèles et contacts Eric Grall)
 
 À utiliser 48 h après F1 ou P0. Durée visée : 3 minutes.
 
@@ -408,5 +577,71 @@ Avantage fidèle, à valider : mention « Soutien fidèle depuis 2025 » sur le 
 5. **La conclusion** : « Je vous envoie le lien par mail tout de suite. » Puis mettre à jour le fichier : date d'appel, statut, réponse.
 
 ---
+
+## 6. Demande des contacts manquants (liste Eric Grall)
+
+### Mail à Eric Grall
+
+**Objet** : Pab Fest 2027 : tes contacts, il nous manque quelques coordonnées
+
+> Bonjour Eric,
+>
+> Merci encore pour ta liste : elle est précieuse pour l'édition 2027. Tous tes contacts sont passés en priorité 1 dans notre fichier.
+>
+> Bonne nouvelle : sept d'entre eux nous ont déjà soutenus en 2025 (Lagadec, Paugam, Ty Coz, Empereur, Jardin Service, Le Coz, LVL Agencement). Nous allons les remercier et leur proposer de renouveler en avant-première.
+>
+> Pour les autres, nous avons trouvé sur internet un standard ou une adresse générique, mais **pas le contact direct de la personne que tu connais**. Pourrais-tu nous transmettre, quand tu as un moment, le **prénom, le nom, l'email direct et le portable** de ton contact pour :
+>
+> | Entreprise | Ce que nous avons | Ce qu'il nous manque |
+> |---|---|---|
+> | **Suez – agence de Saint-Pol** | rien de local (seulement le service clients national) | Email et portable de David Le Scanf |
+> | **Le Coz Couv** | eric.lecoz73@sfr.fr | Le portable d'Eric Le Coz |
+> | **Raub** (Guilers) | miroiterie-brest@raub.fr · 02 98 07 44 88 | Prénom et email direct de M. Salaün |
+> | **Réseau Krill** (Guipavas) | reseau.krill@krill.fr · 02 98 30 34 17 | Prénom et email de Mme Lozach |
+> | **Cozigou** (Ploudaniel) | contact@cozigou.com · 02 98 93 75 55 | Email direct de M. Rouvrais (Christian ?) |
+> | **Colas – agence de Morlaix** | contact.morlaix@colas-co.com · 02 98 88 39 52 | Nom et email de ton contact à l'agence |
+> | **Péran Constructions** (Bodilis) | accueil@peran-brest.com · 02 98 19 20 01 | Prénom et email direct de M. Péran |
+> | **Batibois Pen ar Bed** (Plouénan) | batibois.plouenan@wanadoo.fr · 02 98 69 58 20 | Nom du dirigeant, et confirmer l'email |
+> | **Korn Peinture** (Morlaix) | contact@kornpeinture.com · 02 98 88 07 43 | Nom et email de ton contact |
+> | **La Chikolodenn** (Carantec) | contact.chikolodenn@gmail.com · 02 98 72 22 67 | Nom de ton contact |
+> | **Le Lez – entreprise générale** (Plouzévédé) | ent.thierrylelez@orange.fr · 06 67 28 93 92 | Confirmer que c'est bien Thierry Le Lez |
+> | **Julien Le Lez – couverture** (Plouvorn) | julienlelez.2@orange.fr · 06 50 13 83 81 | Confirmer l'email |
+>
+> Et une question importante : **es-tu d'accord pour que nous citions ton nom** dans notre premier message (« Eric Grall m'a conseillé de vous écrire ») ? Ça change tout pour un premier contact.
+>
+> Tu peux simplement répondre en complétant le tableau, ou m'appeler au {{Téléphone}}.
+>
+> Un grand merci, et à très vite sur l'île,
+>
+> {{Signataire}}
+> Pab Fest — association Mignoned ar Pab
+
+---
+
+### Plan B : aux adresses génériques des entreprises
+
+À envoyer à l'adresse générique ou via le formulaire du site, uniquement si Eric n'a pas les coordonnées.
+Le nom de l'interlocuteur connu d'Eric est indiqué entre crochets.
+
+**Objet** : Pab Fest 2027 — à l'attention de [M. / Mme Nom], de la part d'Eric Grall
+
+> Bonjour,
+>
+> Je m'occupe des partenaires du **Pab Fest**, le festival de bières artisanales et de musiques du monde de l'île de Batz.
+>
+> Eric Grall nous a recommandé de prendre contact avec **[M. / Mme Nom]** au sujet de notre édition 2027. Pourriez-vous lui transmettre ce message, ou nous indiquer son adresse email directe ?
+>
+> En deux mots : nous sommes une association reconnue d'intérêt général, chaque soutien donne droit à un reçu fiscal (réduction de 60 % pour une entreprise), et dès 300 € l'entreprise est visible sur le festival.
+>
+> Merci beaucoup pour votre aide,
+>
+> {{Signataire}}
+> Pab Fest — association Mignoned ar Pab
+> {{Téléphone}}
+>
+> *Pour ne plus recevoir nos messages, répondez « STOP ».*
+
+---
+
 
 *Taux de réduction, plafonds et limite des 25 % : à valider par le trésorier avant le premier envoi. Les crochets [ ] sont à remplir par l'équipe.*
