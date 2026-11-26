@@ -4,7 +4,7 @@ Usage : python3 emails/generer_mails_html.py emails/MAILS-CAMPAGNE-2027.html
 import html, re, sys
 
 FORM = "https://www.helloasso.com/associations/mignoned-ar-pab/formulaires/4"
-BANNER = "https://raw.githubusercontent.com/Gintho/PabFest/main/assets/banniere-entreprises.jpg"
+LOGO = "https://raw.githubusercontent.com/Gintho/PabFest/main/assets/logo-pab.png"
 NUIT, CREME, JAUNE, ORANGE, GRIS = "#1F282A", "#F0ECE2", "#E8E358", "#B5501C", "#6b6250"
 
 PALIERS = [  # repris du formulaire HelloAsso n°4
@@ -164,7 +164,7 @@ def mail(m):
     head = (f'<p style="max-width:600px;margin:0 auto 4px;font:bold 14px Arial;color:{NUIT};">MAIL {m["n"]} · {html.escape(m["nom"]).upper()}</p>'
             f'<p style="max-width:600px;margin:0 auto 4px;font:13px Arial;color:{GRIS};">Pour qui : {html.escape(m["qui"])} · Envoi : {html.escape(m["quand"])}</p>'
             f'<p style="max-width:600px;margin:0 auto 12px;font:13px Arial;color:{GRIS};"><b>Objet :</b> {html.escape(m["objet"])}</p>')
-    body = [f'<tr><td><a href="{m.get('banner_href', FORM)}"><img src="{BANNER}" width="600" alt="PAB FEST 2027 · Devenez partenaire" style="display:block;width:100%;max-width:600px;height:auto;border:0;"></a></td></tr>',
+    body = [f'<tr><td align="center" style="padding:28px 32px 0;"><a href="{m.get('banner_href', FORM)}"><img src="{LOGO}" width="110" height="110" alt="PAB · Brasserie artisanale · Île de Batz" style="display:block;width:110px;height:110px;border:0;"></a></td></tr>',
             f'<tr><td style="padding:28px 32px 4px;{TXT}">{paras(m["avant"])}</td></tr>']
     if m["paliers"]:
         body.append(paliers())
