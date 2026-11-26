@@ -127,10 +127,10 @@ def paras(lines):
     return "".join(out)
 
 
-def bouton(label, sous):
+def bouton(label, sous, href=FORM):
     return (f'<tr><td align="center" style="padding:6px 32px 18px;">'
             f'<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" bgcolor="{NUIT}" style="border-radius:6px;">'
-            f'<a href="{FORM}" style="display:inline-block;padding:15px 34px;font:bold 17px Arial,Helvetica,sans-serif;color:{CREME};text-decoration:none;border-radius:6px;">{html.escape(label)}&nbsp;→</a>'
+            f'<a href="{href}" style="display:inline-block;padding:15px 34px;font:bold 17px Arial,Helvetica,sans-serif;color:{CREME};text-decoration:none;border-radius:6px;">{html.escape(label)}&nbsp;→</a>'
             f'</td></tr></table><p style="margin:10px 0 0;font-size:13px;color:{GRIS};">{html.escape(sous)}</p></td></tr>')
 
 
@@ -164,12 +164,12 @@ def mail(m):
     head = (f'<p style="max-width:600px;margin:0 auto 4px;font:bold 14px Arial;color:{NUIT};">MAIL {m["n"]} · {html.escape(m["nom"]).upper()}</p>'
             f'<p style="max-width:600px;margin:0 auto 4px;font:13px Arial;color:{GRIS};">Pour qui : {html.escape(m["qui"])} · Envoi : {html.escape(m["quand"])}</p>'
             f'<p style="max-width:600px;margin:0 auto 12px;font:13px Arial;color:{GRIS};"><b>Objet :</b> {html.escape(m["objet"])}</p>')
-    body = [f'<tr><td><a href="{FORM}"><img src="{BANNER}" width="600" alt="PAB FEST 2027 · Devenez partenaire" style="display:block;width:100%;max-width:600px;height:auto;border:0;"></a></td></tr>',
+    body = [f'<tr><td><a href="{m.get('banner_href', FORM)}"><img src="{BANNER}" width="600" alt="PAB FEST 2027 · Devenez partenaire" style="display:block;width:100%;max-width:600px;height:auto;border:0;"></a></td></tr>',
             f'<tr><td style="padding:28px 32px 4px;{TXT}">{paras(m["avant"])}</td></tr>']
     if m["paliers"]:
         body.append(paliers())
     if m["bouton"]:
-        body.append(bouton(m["bouton"], m["sous"]))
+        body.append(bouton(m["bouton"], m["sous"], m.get("href", FORM)))
     body.append(f'<tr><td style="padding:14px 32px 28px;{TXT}">{paras(m["apres"])}{SIGNATURE}</td></tr>')
     return (head + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center">'
             f'<table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:100%;background:#ffffff;border-radius:8px;overflow:hidden;">'
