@@ -7,11 +7,11 @@ FORM = "https://www.helloasso.com/associations/mignoned-ar-pab/formulaires/4"
 LOGO = "https://raw.githubusercontent.com/Gintho/PabFest/main/assets/logo-pab.png"
 NUIT, CREME, JAUNE, ORANGE, GRIS = "#1F282A", "#F0ECE2", "#E8E358", "#B5501C", "#6b6250"
 
-PALIERS = [  # repris du formulaire HelloAsso n°4
-    ("La Pinte", "300 €", "120 €", "Votre logo sur nos affiches, flyers, site et réseaux sociaux.", "Finance l'accueil des brasseurs artisanaux.", False),
-    ("La Tournée", "500 €", "200 €", "Votre logo, le panneau des partenaires, une publication Instagram et une invitation à la soirée d'ouverture.", "Finance le cachet des artistes.", True),
-    ("Le Fût", "1 000 €", "400 €", "Tout La Tournée, plus une publication dédiée et votre logo sur les t-shirts des bénévoles.", "Finance la scène, le son et la lumière.", False),
-    ("Le Brasseur", "dès 2 000 €", "dès 800 €", "Une présence sur mesure : scène à vos couleurs, bâche ou concert à votre nom.", "Finance une soirée complète du festival.", False),
+PALIERS = [  # v3 du 27/11/2026, validée (retours de Tanguy) · à reporter dans le formulaire HelloAsso n°4
+    ("La Pinte", "300 €", "120 €", "Votre logo sur nos affiches, flyers, site web et réseaux sociaux, et 2 tickets consommation.", "Finance l'accueil des brasseurs artisanaux.", False),
+    ("La Tournée", "500 €", "200 €", "Tout La Pinte, plus votre logo sur le panneau des partenaires du festival, une invitation à la soirée d'ouverture et 4 tickets consommation.", "Finance le cachet des artistes.", True),
+    ("Le Fût", "1 000 €", "400 €", "Tout La Tournée, plus une publication Instagram dédiée à votre entreprise, votre logo sur le t-shirt du festival, 6 tickets consommation et 2 goodies du festival (t-shirt, casquette ou bob).", "Finance la scène, le son et la lumière.", False),
+    ("Le Brasseur", "dès 2 000 €", "dès 800 €", "Tout Le Fût, plus une présence sur mesure, pensée pour vous et avec nous. Contactez-nous !", "Finance une soirée complète du festival.", False),
 ]
 
 MAILS = [
@@ -142,7 +142,7 @@ def paliers():
         lab = "En parler" if brasseur else "Choisir"
         if top:
             box = f'bgcolor="{NUIT}" style="background:{NUIT};border-radius:8px;"'; fg, sub, btn = CREME, "#c9c2b0", f"background:{JAUNE};color:{NUIT};"
-            badge = f'<span style="display:inline-block;margin-bottom:4px;padding:2px 8px;background:{JAUNE};color:{NUIT};font:bold 11px Arial;border-radius:10px;">CONSEILLÉE</span><br>'
+            badge = f'<span style="display:inline-block;margin-bottom:4px;padding:2px 8px;background:{JAUNE};color:{NUIT};font:bold 11px Arial;border-radius:10px;">LA PLUS CHOISIE</span><br>'
         else:
             box = 'style="border:1px solid #d9d3c4;border-radius:8px;"'; fg, sub, btn = NUIT, GRIS, f"background:{CREME};color:{NUIT};"; badge = ""
         out.append(
